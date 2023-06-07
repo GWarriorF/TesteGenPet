@@ -1,4 +1,4 @@
-package cadastro.modelo;
+package cadastro.AnimalModelo;
 
 public class CadastroAnimalCachorro {
 
