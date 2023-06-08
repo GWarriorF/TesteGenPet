@@ -1,9 +1,2 @@
-/**
- * 
- */
-/**
- * @author gabri
- *
- */
-module genpet {
+module GenPet {
 }
