@@ -3,20 +3,18 @@ package cadastro.AnimalModelo;
 public abstract class CadastroAnimal {
 	private String nomeAnimal;
 	private String nomeDono;
-	private String raca;
 	private String cor;
 	private String sexo;
 	private String genero;
 	private String endereço;
 	private int idade;
-	private int cpf;
+	private String cpf;
 	private float peso;
 	
-	public CadastroAnimal(String nomeAnimal, String nomeDono, String raca, String cor, String sexo, String genero, int idade, int cpf, float peso) 
+	public CadastroAnimal(String nomeAnimal, String nomeDono, String cor, String sexo, String genero, int idade, String cpf, float peso) 
 	{
 		this.nomeAnimal = nomeAnimal;
 		this.nomeDono = nomeDono;
-		this.raca = raca;
 		this.cor = cor;
 		this.sexo = sexo;
 		this.genero = genero;
@@ -39,14 +37,6 @@ public abstract class CadastroAnimal {
 
 	public void setNomeDono(String nomeDono) {
 		this.nomeDono = nomeDono;
-	}
-
-	public String getRaca() {
-		return raca;
-	}
-
-	public void setRaca(String raca) {
-		this.raca = raca;
 	}
 
 	public String getCor() {
@@ -89,11 +79,11 @@ public abstract class CadastroAnimal {
 		this.idade = idade;
 	}
 
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
@@ -104,7 +94,5 @@ public abstract class CadastroAnimal {
 	public void setPeso(float peso) {
 		this.peso = peso;
 	}
-
-	
 	
 }
