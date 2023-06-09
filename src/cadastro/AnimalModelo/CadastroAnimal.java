@@ -1,25 +1,26 @@
 package cadastro.AnimalModelo;
 
+import java.util.List;
+
 public abstract class CadastroAnimal {
 	private String nomeAnimal;
 	private String nomeDono;
-	private String raca;
 	private String cor;
 	private String sexo;
 	private String genero;
-	private String endereço;
+	private String endereco;
 	private int idade;
-	private int cpf;
+	private String cpf;
 	private float peso;
 	
-	public CadastroAnimal(String nomeAnimal, String nomeDono, String raca, String cor, String sexo, String genero, int idade, int cpf, float peso) 
+	public CadastroAnimal(String nomeAnimal, String nomeDono, String cor, String sexo, String genero, String endereco, int idade, String cpf, float peso) 
 	{
 		this.nomeAnimal = nomeAnimal;
 		this.nomeDono = nomeDono;
-		this.raca = raca;
 		this.cor = cor;
 		this.sexo = sexo;
 		this.genero = genero;
+		this.endereco = endereco;
 		this.idade = idade;
 		this.cpf = cpf;
 		this.peso = peso;
@@ -39,14 +40,6 @@ public abstract class CadastroAnimal {
 
 	public void setNomeDono(String nomeDono) {
 		this.nomeDono = nomeDono;
-	}
-
-	public String getRaca() {
-		return raca;
-	}
-
-	public void setRaca(String raca) {
-		this.raca = raca;
 	}
 
 	public String getCor() {
@@ -74,11 +67,11 @@ public abstract class CadastroAnimal {
 	}
 
 	public String getEndereço() {
-		return endereço;
+		return endereco;
 	}
 
 	public void setEndereço(String endereço) {
-		this.endereço = endereço;
+		this.endereco = endereço;
 	}
 
 	public int getIdade() {
@@ -89,11 +82,11 @@ public abstract class CadastroAnimal {
 		this.idade = idade;
 	}
 
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
