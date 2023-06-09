@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import cadastro.AnimalModelo.CadastroAnimal;
-import cadastro.AnimalModelo.CadastroAnimalCachorro;
-import cadastro.AnimalModelo.CadastroAnimalGato;
+import cadastro.modelo.CadastroAnimal;
+import cadastro.modelo.CadastroAnimalCachorro;
+import cadastro.modelo.CadastroAnimalGato;
 
 public class MetodosMenu extends CadastroAnimal
 {
