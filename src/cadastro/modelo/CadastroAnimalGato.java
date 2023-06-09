@@ -1,4 +1,4 @@
-package cadastro.AnimalModelo;
+package cadastro.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,6 @@ public class CadastroAnimalGato extends CadastroAnimal {
 		this.pelo = pelo;
 		this.raca = raca;
 	}
-
 
 	public int getPelo() {
 		return pelo;

@@ -3,7 +3,7 @@ package cadastro.menu;
 import java.util.List;
 import java.util.Scanner;
 
-import cadastro.AnimalModelo.CadastroAnimalGato;
+import cadastro.modelo.CadastroAnimalGato;
 
 public class MenuTestes {
 
