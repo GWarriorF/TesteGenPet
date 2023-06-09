@@ -1,5 +1,6 @@
 package cadastro.AnimalModelo;
 
-public class CadastroAnimalCachorro {
+public class CadastroAnimalCachorro 
+{
 
 }

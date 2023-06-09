@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import cadastro.AnimalModelo.CadastroAnimalGato;
 
-public class MenuMetodos {
+public class MenuTestes {
 
 	public static void main(String[] args) {
 
