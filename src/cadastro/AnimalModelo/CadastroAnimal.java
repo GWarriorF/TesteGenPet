@@ -6,31 +6,19 @@ public abstract class CadastroAnimal {
 	private String cor;
 	private String sexo;
 	private String especie;
-<<<<<<< HEAD
-	private String endereço;
-=======
 	private String endereco;
->>>>>>> a3d6455116d61c1662bdbd06d58ae251532b366a
 	private int idade;
 	private String cpf;
 	private float peso;
 	
-<<<<<<< HEAD
-	public CadastroAnimal(String nomeAnimal, String nomeDono, String cor, String sexo, String especie, int idade, String cpf, float peso) 
-	{
-=======
 	public CadastroAnimal(String nomeAnimal, String nomeDono, String cor, String sexo, String especie, String endereco,
 			int idade, String cpf, float peso) {
->>>>>>> a3d6455116d61c1662bdbd06d58ae251532b366a
 		this.nomeAnimal = nomeAnimal;
 		this.nomeDono = nomeDono;
 		this.cor = cor;
 		this.sexo = sexo;
 		this.especie = especie;
-<<<<<<< HEAD
-=======
 		this.endereco = endereco;
->>>>>>> a3d6455116d61c1662bdbd06d58ae251532b366a
 		this.idade = idade;
 		this.cpf = cpf;
 		this.peso = peso;
@@ -76,21 +64,12 @@ public abstract class CadastroAnimal {
 		this.especie = especie;
 	}
 
-<<<<<<< HEAD
-	public String getEndereço() {
-		return endereço;
-	}
-
-	public void setEndereço(String endereço) {
-		this.endereço = endereço;
-=======
 	public String getEndereco() {
 		return endereco;
 	}
 
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
->>>>>>> a3d6455116d61c1662bdbd06d58ae251532b366a
 	}
 
 	public int getIdade() {
@@ -116,5 +95,4 @@ public abstract class CadastroAnimal {
 	public void setPeso(float peso) {
 		this.peso = peso;
 	}
-	
 }
