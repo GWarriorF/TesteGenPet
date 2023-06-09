@@ -55,7 +55,7 @@ public class MenuPet {
 			switch (exibicao) {
 			case 1:
 				System.out.println("Cadastrar Novo Animal: ");
-				metodosMenu.cadastrar();
+				ficha.cadastrar();
 				System.out.println("Animal cadastrado com sucesso!");
 				keyPress();
 				break;
