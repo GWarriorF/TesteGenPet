@@ -1,6 +1,5 @@
 package cadastro.AnimalModelo;
 
-import java.util.List;
 
 public abstract class CadastroAnimal {
 	private String nomeAnimal;
@@ -13,12 +12,8 @@ public abstract class CadastroAnimal {
 	private String cpf;
 	private float peso;
 	
-<<<<<<< HEAD
-	public CadastroAnimal(String nomeAnimal, String nomeDono, String cor, String sexo, String genero, String endereco, int idade, String cpf, float peso) 
-=======
-	public CadastroAnimal(String nomeAnimal, String nomeDono, String cor, String sexo, String genero, int idade, String cpf, float peso) 
->>>>>>> 4b2536d82884b1fae46e245331fd22e119d7c1f9
-	{
+	public CadastroAnimal(String nomeAnimal, String nomeDono, String cor, String sexo, String genero, String endereco,
+			int idade, String cpf, float peso) {
 		this.nomeAnimal = nomeAnimal;
 		this.nomeDono = nomeDono;
 		this.cor = cor;
