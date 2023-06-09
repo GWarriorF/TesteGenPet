@@ -1,24 +1,23 @@
 package cadastro.AnimalModelo;
 
-
 public abstract class CadastroAnimal {
 	private String nomeAnimal;
 	private String nomeDono;
 	private String cor;
 	private String sexo;
-	private String genero;
+	private String especie;
 	private String endereco;
 	private int idade;
 	private String cpf;
 	private float peso;
 	
-	public CadastroAnimal(String nomeAnimal, String nomeDono, String cor, String sexo, String genero, String endereco,
+	public CadastroAnimal(String nomeAnimal, String nomeDono, String cor, String sexo, String especie, String endereco,
 			int idade, String cpf, float peso) {
 		this.nomeAnimal = nomeAnimal;
 		this.nomeDono = nomeDono;
 		this.cor = cor;
 		this.sexo = sexo;
-		this.genero = genero;
+		this.especie = especie;
 		this.endereco = endereco;
 		this.idade = idade;
 		this.cpf = cpf;
@@ -57,20 +56,20 @@ public abstract class CadastroAnimal {
 		this.sexo = sexo;
 	}
 
-	public String getGenero() {
-		return genero;
+	public String getEspecie() {
+		return especie;
 	}
 
-	public void setGenero(String genero) {
-		this.genero = genero;
+	public void setEspecie(String especie) {
+		this.especie = especie;
 	}
 
-	public String getEndereço() {
+	public String getEndereco() {
 		return endereco;
 	}
 
-	public void setEndereço(String endereço) {
-		this.endereco = endereço;
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 
 	public int getIdade() {
@@ -96,5 +95,4 @@ public abstract class CadastroAnimal {
 	public void setPeso(float peso) {
 		this.peso = peso;
 	}
-	
 }
