@@ -5,12 +5,14 @@ import java.util.Scanner;
 
 import cadastro.modelo.CadastroAnimal;
 
-public class MetodosMenu
-{
+public class MetodosMenu 
+{	
+	float saldoTotal, saldo; 
 	String lerString;
 	int lerInteiro;
 	float lerFloat;
 	ArrayList<CadastroAnimal> listaCadastro = new ArrayList<CadastroAnimal>();
+	
 	
 	public void cadastrar()
 	{
@@ -59,6 +61,35 @@ public class MetodosMenu
 		listaCadastro.add(animalLista);
 		
 		leia.close();
+	}
+	
+	//Rrumando os erros
+	/*public void castrar()
+	{
+		if(getEspecie().equalsIgnoreCase("Gato")) 
+		{
+			saldo = 400.00f;
+			saldoTotal += saldo;
+		} else if (getEspecie().equalsIgnoreCase("Cachorro")) 
+		{
+			saldo = 900.00f;
+			saldoTotal += saldo;
+		}else 
+		{
+			System.out.println("Não tratamos essa especie de animal");
+		}	
+	
+	}
+	
+	public void consulta() 
+	{
+		saldo = 200.00f;
+		saldoTotal += saldo; 
+	}
+	
+	public void saidaAnimal() 
+	{
+		System.out.println("Valor total: " + saldoTotal); 
 	}
 
 	
