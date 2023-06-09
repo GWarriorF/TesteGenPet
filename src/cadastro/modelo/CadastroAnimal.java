@@ -1,14 +1,17 @@
 package cadastro.modelo;
 
-public class CadastroAnimal {
+public class CadastroAnimal extends CadastroDono
+{
 	private String nomeAnimal;
 	private String cor;
 	private String sexo;
-	private int idade;
+	private String idade;
 	private float peso;
 	
-	public CadastroAnimal(String nomeAnimal, String cor, String sexo,int idade, float peso) 
+	public CadastroAnimal(String nomeDono, String endereco, String cpf, String especie, String nomeAnimal, String cor,
+			String sexo, String idade, float peso) 
 	{
+		super(nomeDono, endereco, cpf, especie);
 		this.nomeAnimal = nomeAnimal;
 		this.cor = cor;
 		this.sexo = sexo;
@@ -40,11 +43,11 @@ public class CadastroAnimal {
 		this.sexo = sexo;
 	}
 
-	public int getIdade() {
+	public String getIdade() {
 		return idade;
 	}
 
-	public void setIdade(int idade) {
+	public void setIdade(String idade) {
 		this.idade = idade;
 	}
 
