@@ -27,47 +27,47 @@ public class MetodosMenu extends CadastroAnimal
 	{
 		Scanner leia = new Scanner(System.in);
 		System.out.print("\nNome da(o) Dona(o): ");
-		leia.skip("\\R");
+//		leia.skip("\\R");
 		lerString = leia.nextLine();
 		setNomeDono(lerString);
 		
 		System.out.print("\nNumero do CPF: ");
-		leia.skip("\\R");
-		lerInteiro = leia.nextInt();
+//		leia.skip("\\R");
+		lerString = leia.nextLine();
 		setCpf(lerString);
 		
 		System.out.print("\nEndereço: ");
-		leia.skip("\\R");
+//		leia.skip("\\R");
 		lerString = leia.nextLine();
 		setEndereco(lerString);
 		
 		System.out.print("\nNome do animal: ");
-		leia.skip("\\R");
+//		leia.skip("\\R");
 		lerString = leia.nextLine();
 		setNomeAnimal(lerString);
 		
 		System.out.print("\nCor do animal: ");
-		leia.skip("\\R");
+//		leia.skip("\\R");
 		lerString = leia.nextLine();
 		setCor(lerString);
 		
 		System.out.print("\nSexo do animal: ");
-		leia.skip("\\R");
+//		leia.skip("\\R");
 		lerString = leia.nextLine();
 		setSexo(lerString);
 		
 		System.out.print("\nEspecie do animal: ");
-		leia.skip("\\R");
+//		leia.skip("\\R");
 		lerString = leia.nextLine();
 		setEspecie(lerString);
 		
 		System.out.print("\nIdade do animal: ");
-		leia.skip("\\R");
+//		leia.skip("\\R");
 		lerInteiro = leia.nextInt();
 		setIdade(lerInteiro);
 		
 		System.out.print("\nPeso do animal: ");
-		leia.skip("\\R");
+//		leia.skip("\\R");
 		lerFloat = leia.nextFloat();
 		setPeso(lerFloat);
 		
