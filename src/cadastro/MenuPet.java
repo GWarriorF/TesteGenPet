@@ -1,8 +1,7 @@
 package cadastro;
 
-import java.util.InputMismatchException;
+import java.util.InputMismatchException; 
 import java.util.Scanner;
-
 import cadastro.menu.MetodosMenu;
 import util.Cores;
 
@@ -13,7 +12,7 @@ public class MenuPet {
 		boolean exibir = true;
 		int exibicao = 0;
 		Scanner ler = new Scanner(System.in);
-		MetodosMenu metodosMenu = new MetodosMenu(null, null, null, null, null, null, exibicao, null, exibicao);
+		MetodosMenu ficha = new MetodosMenu();
 
 		System.out.println(Cores.TEXT_WHITE_BRIGHT + "Pressione " + Cores.TEXT_GREEN_BRIGHT + "\"ENTER\""
 				+ Cores.TEXT_WHITE_BRIGHT + " para começar!\n");
@@ -56,7 +55,7 @@ public class MenuPet {
 			switch (exibicao) {
 			case 1:
 				System.out.println("Cadastrar Novo Animal: ");
-				metodosMenu.cadastrarAnimal();
+				metodosMenu.cadastrar();
 				System.out.println("Animal cadastrado com sucesso!");
 				keyPress();
 				break;

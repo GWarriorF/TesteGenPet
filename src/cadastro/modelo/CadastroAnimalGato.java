@@ -10,10 +10,9 @@ public class CadastroAnimalGato extends CadastroAnimal {
 	private String raca;
 	private static List<String> racas;
 
-
-	public CadastroAnimalGato(String nomeAnimal, String nomeDono, String cor, String sexo, String especie,
-			String endereco, int idade, String cpf, float peso, int pelo, String raca) {
-		super(nomeAnimal, nomeDono, cor, sexo, especie, endereco, idade, cpf, peso);
+	public CadastroAnimalGato(String nomeDono, String endereco, String cpf, String especie, String nomeAnimal,
+			String cor, String sexo, String idade, float peso, int pelo, String raca) {
+		super(nomeDono, endereco, cpf, especie, nomeAnimal, cor, sexo, idade, peso);
 		this.pelo = pelo;
 		this.raca = raca;
 	}

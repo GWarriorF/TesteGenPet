@@ -1,79 +1,67 @@
 package cadastro.menu;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import cadastro.modelo.CadastroAnimal;
-import cadastro.modelo.CadastroAnimalCachorro;
-import cadastro.modelo.CadastroAnimalGato;
 
-public class MetodosMenu extends CadastroAnimal
+public class MetodosMenu
 {
 	String lerString;
 	int lerInteiro;
 	float lerFloat;
-	List<String> racas = CadastroAnimalGato.getRacas();
 	ArrayList<CadastroAnimal> listaCadastro = new ArrayList<CadastroAnimal>();
 	
-	public MetodosMenu(String nomeAnimal, String nomeDono, String cor, String sexo, String especie, String endereco,
-			int idade, String cpf, float peso) {
-		super(nomeAnimal, nomeDono, cor, sexo, especie, endereco, idade, cpf, peso);
-		// TODO Auto-generated constructor stub
-	} 
-
-		
-	public void cadastrarAnimal() 
+	public void cadastrar()
 	{
 		Scanner leia = new Scanner(System.in);
+		CadastroAnimal ficha = new CadastroAnimal(null, null, null, null, null, null, null, null, 0.0f);
+		
 		System.out.print("\nNome da(o) Dona(o): ");
-//		leia.skip("\\R");
 		lerString = leia.nextLine();
-		setNomeDono(lerString);
+		ficha.setNomeDono(lerString);
 		
 		System.out.print("\nNumero do CPF: ");
-//		leia.skip("\\R");
 		lerString = leia.nextLine();
-		setCpf(lerString);
+		ficha.setCpf(lerString);
 		
 		System.out.print("\nEndereço: ");
-//		leia.skip("\\R");
 		lerString = leia.nextLine();
-		setEndereco(lerString);
+		ficha.setEndereco(lerString);
 		
 		System.out.print("\nNome do animal: ");
-//		leia.skip("\\R");
 		lerString = leia.nextLine();
-		setNomeAnimal(lerString);
+		ficha.setNomeAnimal(lerString);
 		
 		System.out.print("\nCor do animal: ");
-//		leia.skip("\\R");
 		lerString = leia.nextLine();
-		setCor(lerString);
+		ficha.setCor(lerString);
 		
 		System.out.print("\nSexo do animal: ");
-//		leia.skip("\\R");
 		lerString = leia.nextLine();
-		setSexo(lerString);
+		ficha.setSexo(lerString);
 		
 		System.out.print("\nEspecie do animal: ");
-//		leia.skip("\\R");
 		lerString = leia.nextLine();
-		setEspecie(lerString);
+		ficha.setEspecie(lerString);
 		
 		System.out.print("\nIdade do animal: ");
-//		leia.skip("\\R");
-		lerInteiro = leia.nextInt();
-		setIdade(lerInteiro);
+		lerString = leia.nextLine();
+		ficha.setIdade(lerString);
 		
 		System.out.print("\nPeso do animal: ");
-//		leia.skip("\\R");
 		lerFloat = leia.nextFloat();
-		setPeso(lerFloat);
+		ficha.setPeso(lerFloat);
+		
+		CadastroAnimal animalLista = new CadastroAnimal(ficha.getNomeAnimal(), ficha.getNomeDono(), ficha.getCor(), 
+				ficha.getSexo(), ficha.getEspecie(),ficha.getEndereco(), ficha.getIdade(), ficha.getCpf(), ficha.getPeso());
+		
+		listaCadastro.add(animalLista);
 		
 		leia.close();
-
 	}
+
+	
 	
 	/*public void tiposEspecie(CadastroAnimal animal) 
 	{
