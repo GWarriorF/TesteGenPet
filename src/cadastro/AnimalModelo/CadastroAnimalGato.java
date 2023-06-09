@@ -86,8 +86,8 @@ public class CadastroAnimalGato extends CadastroAnimal {
 		System.out.println("Raça: " + this.getRaca());
 		System.out.println("Cor: " + this.getCor());
 		System.out.println("Sexo: " + this.getSexo());
-		System.out.println("Genero: " + this.getGenero());
-		System.out.println("Endereço: " + this.getEndereço());
+		System.out.println("Genero: " + this.getEspecie());
+		System.out.println("Endereço: " + this.getEndereco());
 		System.out.println("Idade: " + this.getIdade());
 		System.out.println("CPF: " + this.getCpf());
 		System.out.println("Peso: " + this.getPeso());
