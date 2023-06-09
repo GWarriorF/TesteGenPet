@@ -5,19 +5,19 @@ public abstract class CadastroAnimal {
 	private String nomeDono;
 	private String cor;
 	private String sexo;
-	private String genero;
+	private String especie;
 	private String endereço;
 	private int idade;
 	private String cpf;
 	private float peso;
 	
-	public CadastroAnimal(String nomeAnimal, String nomeDono, String cor, String sexo, String genero, int idade, String cpf, float peso) 
+	public CadastroAnimal(String nomeAnimal, String nomeDono, String cor, String sexo, String especie, int idade, String cpf, float peso) 
 	{
 		this.nomeAnimal = nomeAnimal;
 		this.nomeDono = nomeDono;
 		this.cor = cor;
 		this.sexo = sexo;
-		this.genero = genero;
+		this.especie = especie;
 		this.idade = idade;
 		this.cpf = cpf;
 		this.peso = peso;
@@ -56,11 +56,11 @@ public abstract class CadastroAnimal {
 	}
 
 	public String getGenero() {
-		return genero;
+		return especie;
 	}
 
 	public void setGenero(String genero) {
-		this.genero = genero;
+		this.especie = genero;
 	}
 
 	public String getEndereço() {
