@@ -55,12 +55,12 @@ public abstract class CadastroAnimal {
 		this.sexo = sexo;
 	}
 
-	public String getGenero() {
+	public String getEspecie() {
 		return especie;
 	}
 
-	public void setGenero(String genero) {
-		this.especie = genero;
+	public void setEspecie(String especie) {
+		this.especie = especie;
 	}
 
 	public String getEndereço() {
