@@ -3,6 +3,8 @@ package cadastro;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import util.Cores;
+
 public class MenuPet {
  
 
@@ -90,6 +92,6 @@ public class MenuPet {
 		            	System.out.println(Cores.TEXT_WHITE_BRIGHT + "Você pressionou uma tecla diferente de " + Cores.TEXT_GREEN_BRIGHT + "\"ENTER\"" + Cores.TEXT_WHITE_BRIGHT + Cores.TEXT_RESET);
 		            }
 		}
-		}}
+		
 
 }
