@@ -1,14 +1,12 @@
 package cadastro;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import cadastro.modelo.CadastroAnimalGato;
 
 public class MetodosRitaGato extends CadastroAnimalGato {
 	
 	public MetodosRitaGato(String nomeAnimal, String nomeDono, String cor, String sexo, String especie, String endereco,
-			int idade, String cpf, float peso, int pelo, String raca) {
+			String idade, String cpf, float peso, int pelo, String raca) {
 		super(nomeAnimal, nomeDono, cor, sexo, especie, endereco, idade, cpf, peso, pelo, raca);
 		// TODO Auto-generated constructor stub
 	}
