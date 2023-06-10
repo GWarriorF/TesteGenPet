@@ -1,6 +1,6 @@
 package cadastro;
 
-import procedimentos.VacinasAbstract;
+import procedimentos.Vacina;
 import cadastro.modelo.CadastroAnimalGato;
 
 public class MetodosRitaGato extends CadastroAnimalGato {
