@@ -18,7 +18,7 @@ public class TestaMetodosRitaGato {
 		float valor;
 		
 		
-while (true){
+		while (true){
 			
 			System.out.println("\n\n*******************************************************************");
 			System.out.println("                                                                   ");

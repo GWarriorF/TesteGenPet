@@ -1,6 +1,8 @@
 package cadastro.menu;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -58,7 +60,7 @@ public class MenuTestes {
 		}
 
 		// teste do gatinho raça
-		List<String> racas = CadastroAnimalGato.getRacas();
+		/*List<String> racas = CadastroAnimalGato.getRacas();
 		System.out.println("Raças de Gatos:");
 		for (int conta = 0; conta < racas.size(); conta++) {
 			int numero = conta + 1;
