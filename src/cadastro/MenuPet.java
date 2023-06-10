@@ -80,18 +80,6 @@ public class MenuPet {
 				System.out.println("Busca Animal");
 				break;
 			case 4:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-				System.out.println("para finalizar pagamento");
-=======
-	
-				System.out.println("para finalizar pagamento");
-				ficha.castrar();
->>>>>>> 6503d1ba095aacdd8bb35fe3e6dfa980e2c3d9af
-
->>>>>>> e7a4dca7a485db7e9dfa587b78aa8e0b4f55c249
 				System.out.println("Atualizar animal");
 				break;
 			case 5:
@@ -118,24 +106,4 @@ public class MenuPet {
 			}
 		}
 	}
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> e7a4dca7a485db7e9dfa587b78aa8e0b4f55c249
-
-	public static void keyPress() {
-		try {
-			System.out.println(Cores.TEXT_WHITE_BRIGHT + "Pressione " + Cores.TEXT_GREEN_BRIGHT + "\"ENTER\""
-					+ Cores.TEXT_WHITE_BRIGHT + " para continuar!\n" + Cores.TEXT_RESET);
-			System.in.read();
-
-		} catch (Exception a) {
-			System.out.println(Cores.TEXT_WHITE_BRIGHT + "Você pressionou uma tecla diferente de "
-					+ Cores.TEXT_GREEN_BRIGHT + "\"ENTER\"" + Cores.TEXT_WHITE_BRIGHT + Cores.TEXT_RESET);
-		}
-	}
 }
-=======
-}
->>>>>>> d03228bf02c2e82877a06b3fb76392841b3af685

@@ -1,13 +1,5 @@
 package cadastro;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import procedimentos.Vacina;
-=======
-
->>>>>>> d03228bf02c2e82877a06b3fb76392841b3af685
->>>>>>> e7a4dca7a485db7e9dfa587b78aa8e0b4f55c249
 import cadastro.modelo.CadastroAnimalGato;
 
 public class MetodosRitaGato extends CadastroAnimalGato {
