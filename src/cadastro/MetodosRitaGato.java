@@ -1,6 +1,5 @@
 package cadastro;
 
-
 import cadastro.modelo.CadastroAnimalGato;
 
 public class MetodosRitaGato extends CadastroAnimalGato {
@@ -8,7 +7,7 @@ public class MetodosRitaGato extends CadastroAnimalGato {
 	public MetodosRitaGato(String nomeAnimal, String nomeDono, String cor, String sexo, String especie, String endereco,
 			String idade, String cpf, float peso, int pelo, String raca) {
 		super(nomeAnimal, nomeDono, cor, sexo, especie, endereco, idade, cpf, peso, pelo, raca);
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	float valor, valorTotal;
@@ -30,20 +29,44 @@ public class MetodosRitaGato extends CadastroAnimalGato {
 			valor = 50;
 			valorTotal += valor;
 		}
+		else if(getPelo() == 4)
+		{
+			valor = 80;
+			valorTotal += valor;
+		}
+		else
+		{
+			System.out.println("Tipo de Pelo inválido!");
+		}
 	}
 	
-    
-	/*public MetodosRitaGato(float banhoGatoPeloCurto, float banhoGatoPeloLongo, float tosaGatoMaquina,
-			float tosaGatoTesoura, float vacinarGatoV5, float vacinarGatoV3, float vacinarGatoRaiva) 
+	public void tosaGato()
 	{
-		this.banhoGatoPeloCurto = banhoGatoPeloCurto;
-		this.banhoGatoPeloLongo = banhoGatoPeloLongo;
-		this.tosaGatoMaquina = tosaGatoMaquina;
-		this.tosaGatoTesoura = tosaGatoTesoura;
-		this.vacinarGatoV5 = vacinarGatoV5;
-		this.vacinarGatoV3 = vacinarGatoV3;
-		this.vacinarGatoRaiva = vacinarGatoRaiva;
-	}*/
+		if(getPelo() == 1)
+		{
+			valor = 50;
+			valorTotal += valor;
+		}
+		else if(getPelo() == 2)
+		{
+			valor = 60;
+			valorTotal += valor;
+		}
+		else if(getPelo() == 3)
+		{
+			valor = 75;
+			valorTotal += valor;
+		}
+		else
+		{
+			System.out.println("Tipo de Pelo inválido!");
+		}
+	}
+	
+	public void vacinaGato()
+	{
+		
+	}
 
-
+	
 }

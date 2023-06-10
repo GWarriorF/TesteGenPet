@@ -3,9 +3,6 @@ package cadastro;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import cadastro.MetodosRitaGato;
-import cadastro.MenuPet;
-import java.util.List;
 
 public class TestaMetodosRitaGato {
 
@@ -18,7 +15,7 @@ public class TestaMetodosRitaGato {
 		float valor;
 		
 		
-while (true){
+		while (true){
 			
 			System.out.println("\n\n*******************************************************************");
 			System.out.println("                                                                   ");

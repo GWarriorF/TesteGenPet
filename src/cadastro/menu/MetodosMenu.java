@@ -2,8 +2,8 @@ package cadastro.menu;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Scanner;
 import java.util.List;
+import java.util.Scanner;
 
 import cadastro.modelo.CadastroAnimal;
 //import cadastro.modelo.CadastroAnimalCachorro;
@@ -91,9 +91,6 @@ public class MetodosMenu
 			}
 			System.out.println("\n");
 		
-<<<<<<< HEAD
-		listaCadastro.add(animalLista);
-=======
 			System.out.print("Escolha o tipo de raça: ");
 			lerInteiro = leia.nextInt();
 			lerString = racas.get(lerInteiro-1);
@@ -117,10 +114,7 @@ public class MetodosMenu
 			listaCadastro.add(animalCachorro);
 			indiceCadastro += 1;
 		}
->>>>>>> 1ffe07b236093c8f96be94593acfabddd0e75559
 	}
-		
-}
 	
 	//Print feito para testar se está puxando os dados do ultimo cadastro ou não
 	public void printCadastro() 
@@ -187,4 +181,4 @@ public class MetodosMenu
 		valorTotal = 0.0f; 
 	}
 	
-
+}
