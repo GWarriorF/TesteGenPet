@@ -3,7 +3,7 @@ package cadastro;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import cadastro.menu.MetodosMenu;
+import cadastro.menu.metodosThayron;
 import util.Cores;
 
 public class MenuPet {
@@ -13,7 +13,7 @@ public class MenuPet {
 		boolean exibir = true;
 		int exibicao = 0;
 		Scanner ler = new Scanner(System.in);
-		MetodosMenu ficha = new MetodosMenu();
+		metodosThayron ficha = new metodosThayron();
 
 /*		System.out.println(Cores.TEXT_WHITE_BRIGHT + "Bem Vindes a GenPet! \nPressione " + Cores.TEXT_GREEN_BRIGHT + "\"ENTER\""
 				+ Cores.TEXT_WHITE_BRIGHT + " para começar!\n");
@@ -69,18 +69,20 @@ public class MenuPet {
 
 			switch (exibicao) {
 			case 1:
-				System.out.println("Cadastrar Novo Animal: ");
+				System.out.println("\nCadastrar Novo Pet: ");
 				ficha.cadastrar();
 				System.out.println("Animal cadastrado com sucesso!");
 				break;
 			case 2:
-				System.out.println("Lista Animais");
+				System.out.println("Pets Cadastrados: ");
+				ficha.listarCadastros();
 				break;
 			case 3:
 				System.out.println("Busca Animal");
 				break;
 			case 4:
 				System.out.println("Atualizar animal");
+				System.out.println("Animal atualizado com sucesso!");
 				break;
 			case 5:
 				System.out.println("Remover animal");
