@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.List;
 
 import cadastro.modelo.CadastroAnimal;
-import cadastro.modelo.CadastroAnimalCachorro;
+//import cadastro.modelo.CadastroAnimalCachorro;
 import cadastro.modelo.CadastroAnimalGato;
 
 public class MetodosMenu 
@@ -134,29 +134,7 @@ public class MetodosMenu
 		
 	}
 	
-	//Método Castrar
-	/*public void castrar()
-	{
-		CadastroAnimalGato fichaGato = listaCadastroGato.get(null);
-		//Trocar depois para lista cachorro
-		CadastroAnimal fichaCachorro = listaCadastro.get();
-		
-		if(fichaGato.getEspecie().equalsIgnoreCase("Gato") ) 
-		{
-			valor = 400.00f;
-			valorTotal += valor;
-			valorTotalDia += valorTotal;
-		} else if (fichaCachorro.getEspecie().equalsIgnoreCase("Cachorro")) 
-		{
-			valor = 900.00f;
-			valorTotal += valor;
-		}else 
-		{
-			System.out.println("Não tratamos essa especie de animal");
-		}	
-				
-	}*/
-	
+	//Método Castrar 
 	public void castrar() 
 	{
 		Iterator<CadastroAnimalGato> iFichaGato = listaCadastroGato.iterator();
