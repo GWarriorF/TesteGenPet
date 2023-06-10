@@ -58,4 +58,8 @@ public class CadastroAnimal extends CadastroDono
 	public void setPeso(float peso) {
 		this.peso = peso;
 	}
+	
+	public void visualizarAnimal() {
+		super.visualizarDono();
+	}
 }

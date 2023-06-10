@@ -2,8 +2,8 @@ package cadastro.menu;
 
 import java.util.ArrayList; 
 import java.util.Iterator;
-import java.util.Scanner;
 import java.util.List;
+import java.util.Scanner;
 
 import cadastro.modelo.CadastroAnimal;
 import cadastro.modelo.CadastroAnimalCachorro;

@@ -9,6 +9,7 @@ public class CadastroAnimalGato extends CadastroAnimal {
 	private static List<String> tipoPelo;
 	private String raca;
 	private static List<String> racas;
+	private static List<String> vacinasG;
 
 	public CadastroAnimalGato(String nomeDono, String endereco, String cpf, String especie, String nomeAnimal,
 			String cor, String sexo, String idade, float peso, String pelo, String raca) {
@@ -57,7 +58,7 @@ public class CadastroAnimalGato extends CadastroAnimal {
 		racas.add("Exótico");
 		racas.add("Norueguês da Floresta");
 		return racas;
-		// Adicione outras raças de gatos conforme necessário
+		// Adicionar outras raças de gatos conforme necessário
 	}
 
 	public static void setRacas(List<String> racas) {
@@ -76,20 +77,30 @@ public class CadastroAnimalGato extends CadastroAnimal {
 	public static void setTipoPelo(List<String> tipoPelo) {
 		CadastroAnimalGato.tipoPelo = tipoPelo;
 	}
+	
+	public static List<String> getVacinasG() {
+		vacinasG = new ArrayList<>();
+		vacinasG.add("V5");
+		vacinasG.add("V4");
+		vacinasG.add("V3");
+		vacinasG.add("Antirrábica");
+		return vacinasG;
+	}
+
+	public static void setVacinasG(List<String> vacinasG) {
+		CadastroAnimalGato.vacinasG = vacinasG;
+	}
+      
 
 	public void visualizargato() {
 		System.out.println("*-*-*-*-*-*-*-*-*-*-*-*");
 		System.out.println("Dados do Pet:");
 		System.out.println("*-*-*-*-*-*-*-*-*-*-*-*");
 		System.out.println("Nome do Pet: " + this.getNomeAnimal());
-		System.out.println("Nome do Dono: " + this.getNomeDono());
 		System.out.println("Raça: " + this.getRaca());
 		System.out.println("Cor: " + this.getCor());
 		System.out.println("Sexo: " + this.getSexo());
-		System.out.println("Especie: " + this.getEspecie());
-		System.out.println("Endereço: " + this.getEndereco());
 		System.out.println("Idade: " + this.getIdade());
-		System.out.println("CPF: " + this.getCpf());
 		System.out.println("Peso: " + this.getPeso());
 		System.out.println("Tipo do Pelo: " + getTipoPelo());
 

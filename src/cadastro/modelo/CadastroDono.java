@@ -55,8 +55,8 @@ public abstract class CadastroDono {
 
 
 	
-	public void visualizar() {
-		System.out.println("\n\n                               FICHA                          ");
+	public void visualizarDono() {
+		System.out.println("\n\n                      FICHA                          ");
 		System.out.println("************************************************************");
 		System.out.println("Nome do tutor: " + this.nomeDono);
 		System.out.println("CPF: " + this.cpf);
