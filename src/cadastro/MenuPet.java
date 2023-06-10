@@ -1,11 +1,10 @@
 package cadastro;
-
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 import cadastro.menu.MetodosMenu;
 import util.Cores;
-
 public class MenuPet {
 
 	public static void main(String[] args) {
@@ -18,6 +17,7 @@ public class MenuPet {
 /*		System.out.println(Cores.TEXT_WHITE_BRIGHT + "Bem Vindes a GenPet! \nPressione " + Cores.TEXT_GREEN_BRIGHT + "\"ENTER\""
 				+ Cores.TEXT_WHITE_BRIGHT + " para começar!\n");
 		ler.skip("\\R");*/
+    
 
 		while (exibir) {
 			System.out.println("\n   *--------*--------*-------*-----*");
@@ -74,8 +74,8 @@ public class MenuPet {
 				System.out.println("Animal cadastrado com sucesso!");
 				break;
 			case 2:
-				System.out.println("Lista Animais");
-				break;
+			    System.out.println("Lista de Pets Cadastrados:");
+                break;
 			case 3:
 				System.out.println("Busca Animal");
 				break;
@@ -106,4 +106,4 @@ public class MenuPet {
 			}
 		}
 	}
-}
+	}

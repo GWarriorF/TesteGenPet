@@ -59,9 +59,9 @@ public class MetodosMenu
 				ficha.getSexo(), ficha.getEspecie(),ficha.getEndereco(), ficha.getIdade(), ficha.getCpf(), ficha.getPeso());
 		
 		listaCadastro.add(animalLista);
-		
-		leia.close();
 	}
+		
+}
 	
 	//Rrumando os erros
 	/*public void castrar()
@@ -127,4 +127,4 @@ public class MetodosMenu
 	}*/
 	
 	
-}
+
