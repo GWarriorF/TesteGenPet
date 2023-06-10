@@ -1,25 +1,21 @@
 package cadastro.menu;
 
-import java.util.ArrayList;
+import java.util.ArrayList; 
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.List;
 
 import cadastro.modelo.CadastroAnimal;
-//import cadastro.modelo.CadastroAnimalCachorro;
+import cadastro.modelo.CadastroAnimalCachorro;
 import cadastro.modelo.CadastroAnimalGato;
 
 public class MetodosMenu 
 {	
 	int indiceCadastro = -1;
-	float valorTotalDia, valorTotal, valor; 
+	float lerFloat, valorTotalDia, valorTotal, valor; 
 	String lerString;
 	int lerInteiro, numero;
-	float lerFloat;
-	/*Apagar lista Cadastro e colocar as listaCadastro.add(animalCachorro); como listaCadastroCachorro.add(animalCachorro)
-	  Quando os Métodos da classe cachorro forem construídos*/
-	ArrayList<CadastroAnimal> listaCadastro = new ArrayList<CadastroAnimal>();
-	//ArrayList<CadastroAnimalCachorro> listaCadastroCachorro = new ArrayList<CadastroAnimalCachorro>();
+	ArrayList<CadastroAnimalCachorro> listaCadastroCachorro = new ArrayList<CadastroAnimalCachorro>();
 	ArrayList<CadastroAnimalGato> listaCadastroGato = new ArrayList<CadastroAnimalGato>();
 	
 	public void cadastrar()
@@ -67,7 +63,7 @@ public class MetodosMenu
 		if (ficha.getEspecie().equalsIgnoreCase("Gato")) 
 		{
 			CadastroAnimalGato fichaGato = new CadastroAnimalGato(null, null, null, null, null, 
-					null, null, null, 0.0f, 0, null);
+					null, null, null, 0.0f, null, null);
 			
 			List<String> tipoPelo = CadastroAnimalGato.getTipoPelo();
 			System.out.println("\nEscolha o tipo de pelo: \n");
@@ -75,11 +71,11 @@ public class MetodosMenu
 	        {
 	            System.out.println((indice + 1) + " - " + tipoPelo.get(indice));
 	        }
-	        System.out.println("\n");
 	        
 	        System.out.print("Escolha o tipo de pelo:");
 			lerInteiro = leia.nextInt();
-			fichaGato.setPelo(lerInteiro);
+			lerString = tipoPelo.get(lerInteiro-1);
+			fichaGato.setPelo(lerString);
 			
 			List<String> racas = CadastroAnimalGato.getRacas();
 			System.out.println("\n\t\tRaças de Gatos: \n");
@@ -89,7 +85,6 @@ public class MetodosMenu
 				String raca = racas.get(indice);
 				System.out.println(numero + " - " + raca);
 			}
-			System.out.println("\n");
 		
 			System.out.print("Escolha o tipo de raça: ");
 			lerInteiro = leia.nextInt();
@@ -103,15 +98,54 @@ public class MetodosMenu
 			
 			listaCadastroGato.add(animalGato);
 			indiceCadastro += 1;
-			
-		//Alterar após finalização da classe cachorro
-		}else if (ficha.getEspecie().equalsIgnoreCase("Cachorro")) 
+		}
+		
+		if (ficha.getEspecie().equalsIgnoreCase("Cachorro")) 
 		{
-			CadastroAnimal animalCachorro = new CadastroAnimal(ficha.getNomeDono(), ficha.getEndereco(), ficha.getCpf(),
-															ficha.getEspecie(), ficha.getNomeAnimal(), ficha.getCor(),
-															ficha.getSexo(), ficha.getIdade(), ficha.getPeso());
+			ArrayList<String> racasCachorro = CadastroAnimalCachorro.getRacaCachorros();
+			ArrayList<String> pelosCachorro = CadastroAnimalCachorro.getTipoPeloCachorros();
+			CadastroAnimalCachorro fichaCachorro = new CadastroAnimalCachorro(null, null, null, null, 
+																			null, null, null, null, 0.0f, null, null);
 			
-			listaCadastro.add(animalCachorro);
+			
+			System.out.println("\n*--------*--------*-------*-----*");
+			System.out.println("\tTipos de Raças: ");
+			System.out.println("*--------*--------*-------*-----*");
+			
+			for(int indice1 = 0; indice1 < racasCachorro.size(); indice1++ ) 
+			{
+				String racaCachorro = racasCachorro.get(indice1);
+				System.out.println("\t" + (indice1 + 1) + " - " + racaCachorro); 
+			}
+			
+			System.out.print("Escolha o tipo de raça: ");
+			lerInteiro = leia.nextInt();
+			lerString = racasCachorro.get(lerInteiro - 1);
+			fichaCachorro.setTipoPeloCachorro(lerString);
+			
+			
+			System.out.println("\n*--------*--------*-------*-----*");
+			System.out.println("\tTipos de Pelo: ");
+			System.out.println("*--------*--------*-------*-----*");
+			
+			for(int indice2 = 0; indice2 <= pelosCachorro.size(); indice2++) 
+			{
+				String peloCachorro = pelosCachorro.get(indice2);
+				System.out.println("\t" + (indice2 + 1) + " - " + peloCachorro);
+			}
+			
+			System.out.println("Escolha o tipo de pelo: ");
+			lerInteiro = leia.nextInt();
+			lerString = pelosCachorro.get(lerInteiro - 1);
+			fichaCachorro.setTipoPeloCachorro(lerString);
+			
+			CadastroAnimalCachorro animalCachorro = new CadastroAnimalCachorro(ficha.getNomeDono(), ficha.getEndereco(),
+															ficha.getCpf(), ficha.getEspecie(), ficha.getNomeAnimal(),
+															ficha.getCor(),ficha.getSexo(), ficha.getIdade(),
+															ficha.getPeso(), fichaCachorro.getTipoPeloCachorro(),
+															fichaCachorro.getRacaCachorro());
+			
+			listaCadastroCachorro.add(animalCachorro);
 			indiceCadastro += 1;
 		}
 	}
@@ -119,27 +153,44 @@ public class MetodosMenu
 	//Print feito para testar se está puxando os dados do ultimo cadastro ou não
 	public void printCadastro() 
 	{
-		CadastroAnimalGato ficha = listaCadastroGato.get(indiceCadastro);
-		System.out.println("Peso: " + ficha.getPeso());
-		System.out.println("Nome Dono: " + ficha.getNomeDono());
-		System.out.println("Cor: " + ficha.getCor());
-		System.out.println("Sexo: " + ficha.getSexo());
-		System.out.println("Especie:" + ficha.getEspecie());
-		System.out.println("Endereço:" + ficha.getEndereco());
-		System.out.println("Idade: " + ficha.getIdade());
-		System.out.println("Dono Cpf: " + ficha.getCpf());
-		System.out.println("Nome Animal:" + ficha.getNomeAnimal());
-		System.out.println("Tipo de Pelo " + ficha.getPelo());
-		System.out.println("Raça:" + ficha.getRaca());
+		Iterator<CadastroAnimalGato> iFichaGato = listaCadastroGato.iterator();
+		Iterator<CadastroAnimalCachorro> iFichaCachorro = listaCadastroCachorro.iterator();
 		
+		if(iFichaGato.hasNext()) {
+			CadastroAnimalGato fichaGato = iFichaGato.next();
+			System.out.println("Peso: " + fichaGato.getPeso());
+			System.out.println("Nome Tutor: " + fichaGato.getNomeDono());
+			System.out.println("Cor: " + fichaGato.getCor());
+			System.out.println("Sexo: " + fichaGato.getSexo());
+			System.out.println("Especie:" + fichaGato.getEspecie());
+			System.out.println("Endereço:" + fichaGato.getEndereco());
+			System.out.println("Idade: " + fichaGato.getIdade());
+			System.out.println("Dono Cpf: " + fichaGato.getCpf());
+			System.out.println("Nome Animal:" + fichaGato.getNomeAnimal());
+			System.out.println("Tipo de Pelo " + fichaGato.getPelo());
+			System.out.println("Raça:" + fichaGato.getRaca());
+		}else if (iFichaCachorro.hasNext()) 
+		{
+			CadastroAnimalGato fichaGato = iFichaGato.next();
+			System.out.println("Peso: " + fichaGato.getPeso());
+			System.out.println("Nome Dono: " + fichaGato.getNomeDono());
+			System.out.println("Cor: " + fichaGato.getCor());
+			System.out.println("Sexo: " + fichaGato.getSexo());
+			System.out.println("Especie:" + fichaGato.getEspecie());
+			System.out.println("Endereço:" + fichaGato.getEndereco());
+			System.out.println("Idade: " + fichaGato.getIdade());
+			System.out.println("Dono Cpf: " + fichaGato.getCpf());
+			System.out.println("Nome Animal:" + fichaGato.getNomeAnimal());
+			System.out.println("Tipo de Pelo " + fichaGato.getPelo());
+			System.out.println("Raça:" + fichaGato.getRaca());
+		}
 	}
 	
 	//Método Castrar 
 	public void castrar() 
 	{
 		Iterator<CadastroAnimalGato> iFichaGato = listaCadastroGato.iterator();
-		//Trocar depois para o CadastroAnimalCachorro
-		Iterator<CadastroAnimal> iFichaCachorro = listaCadastro.iterator();
+		Iterator<CadastroAnimalCachorro> iFichaCachorro = listaCadastroCachorro.iterator();
 			
 		if(iFichaGato.hasNext()) 
 		{
@@ -177,6 +228,7 @@ public class MetodosMenu
 	//Método Metodo saída (Adaptar conforme o necessário)
 	public void saidaAnimal() 
 	{
+		printCadastro();
 		System.out.println("Valor total: " + valorTotal); 
 		valorTotal = 0.0f; 
 	}
