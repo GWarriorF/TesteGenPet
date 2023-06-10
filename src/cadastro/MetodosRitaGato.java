@@ -1,77 +1,265 @@
 package cadastro;
 
-<<<<<<< HEAD
 import procedimentos.Vacina;
-=======
 
->>>>>>> d03228bf02c2e82877a06b3fb76392841b3af685
+import java.util.ArrayList;
+import java.util.Scanner;
+import cadastro.modelo.CadastroAnimal;
 import cadastro.modelo.CadastroAnimalGato;
+import cadastro.AnimalModelo.CadastroAnimalCachorro;
 
-public class MetodosRitaGato extends CadastroAnimalGato {
+public class MetodosRitaGato{
 	
-	public MetodosRitaGato(String nomeAnimal, String nomeDono, String cor, String sexo, String especie, String endereco,
-			String idade, String cpf, float peso, int pelo, String raca) {
-		super(nomeAnimal, nomeDono, cor, sexo, especie, endereco, idade, cpf, peso, pelo, raca);
-		
-	}
 	
-	float valor, valorTotal;
 	
-	public void banhoGato()
+	float valor, valorTotal, valorTotalDia;
+	
+	public void banho()
 	{
-		if(getPelo() == 1)
+		CadastroAnimalGato fichaGato = new CadastroAnimalGato(null, null, null, null, null, null, null, null, 0.0f, 0, null);
+		CadastroAnimalCachorro fichaCachorro = new CadastroAnimalCachorro(null, null, null, null, null, null, null, null, 0.0f, 0, null);
+		CadastroAnimal conferirEspecie = new CadastroAnimal(null, null, null, null, null, null, null, null, valor);
+		
+		
+		if(conferirEspecie.getEspecie().equalsIgnoreCase("Gato")) 
 		{
-			valor = 30;
-			valorTotal += valor;
+			switch(fichaGato.getPelo())
+			{
+				case 1:
+					valor = 30;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+		
+				case 2:
+					valor = 40;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+				
+				case 3:
+					valor = 50;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+			
+				case 4:
+					valor = 80;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+			}
 		}
-		else if(getPelo() == 2)
+		
+		
+		if(conferirEspecie.getEspecie().equalsIgnoreCase("Cachorro")) 
 		{
-			valor = 40;
-			valorTotal += valor;
+			switch(fichaCachorro.getTipoPeloCachorro())
+			{
+				case 1:
+					valor = 270;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+		
+				case 2:
+					valor = 120;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+				
+				case 3:
+					valor = 150;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+			
+				case 4:
+					valor = 170;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+					
+				case 5:
+					valor = 170;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+					
+				case 6:
+					valor = 180;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+			}
 		}
-		else if(getPelo() == 3)
-		{
-			valor = 50;
-			valorTotal += valor;
-		}
-		else if(getPelo() == 4)
-		{
-			valor = 80;
-			valorTotal += valor;
-		}
+		
+		
 		else
 		{
 			System.out.println("Tipo de Pelo inválido!");
 		}
 	}
 	
-	public void tosaGato()
+	
+	
+	public void tosa()
 	{
-		if(getPelo() == 1)
+		CadastroAnimalGato fichaGato = new CadastroAnimalGato(null, null, null, null, null, null, null, null, 0.0f, 0, null);
+		CadastroAnimalCachorro fichaCachorro = new CadastroAnimalCachorro(null, null, null, null, null, null, null, null, 0.0f, 0, null);
+		CadastroAnimal conferirEspecie = new CadastroAnimal(null, null, null, null, null, null, null, null, valor);
+		
+		if(conferirEspecie.getEspecie().equalsIgnoreCase("Gato")) 
 		{
-			valor = 50;
-			valorTotal += valor;
+			switch(fichaGato.getPelo())
+			{
+				case 1:
+					valor = 50;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+		
+				case 2:
+					valor = 60;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+				
+				case 3:
+					valor = 75;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+			
+			}
 		}
-		else if(getPelo() == 2)
+		
+		if(conferirEspecie.getEspecie().equalsIgnoreCase("Cachorro")) 
 		{
-			valor = 60;
-			valorTotal += valor;
+			switch(fichaCachorro.getTipoPeloCachorro())
+			{
+				case 1:
+					valor = 270;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+		
+				case 2:
+					valor = 120;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+				
+				case 3:
+					valor = 180;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+			
+				case 4:
+					valor = 130;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+					
+				case 5:
+					valor = 150;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+			}
 		}
-		else if(getPelo() == 3)
-		{
-			valor = 75;
-			valorTotal += valor;
-		}
+		
 		else
 		{
 			System.out.println("Tipo de Pelo inválido!");
 		}
 	}
 	
-	public void vacinaGato()
-	{
-		
-	}
-
 	
+	
+	public void vacina()
+	{
+		ArrayList<String> VacinasGato = Vacina.getVacinaGato();
+		ArrayList<String> VacinasCachorro = Vacina.getVacinaCachorro();
+		CadastroAnimal conferirEspecie = new CadastroAnimal(null, null, null, null, null, null, null, null, valor);
+	
+		Scanner leia = new Scanner(System.in);
+		int tipoVacina;
+		
+		if(conferirEspecie.getEspecie().equalsIgnoreCase("Gato")) {
+			System.out.println("Vacinas Gato: ");
+			for(int indice = 0; indice < VacinasGato.size(); indice++) {
+				int ivacina = indice+1;
+				String vacinaGato = VacinasGato.get(ivacina);
+				System.out.println(ivacina + " - " + vacinaGato);
+			}
+			System.out.println("Informe o tipo de vacina: ");
+			tipoVacina = leia.nextInt();
+			
+			switch(tipoVacina){
+				case 1:
+					valor = 150;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+					
+				case 2:
+					valor = 100;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+					
+				case 3:
+					valor = 80;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+					
+				case 4:
+					valor = 60;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+					
+				default: 
+					System.out.println("Não trabalhamos com este tipo de vacina!");
+					break;
+			}
+				
+		}else if(conferirEspecie.getEspecie().equalsIgnoreCase("Cachorro")) {
+			System.out.println("Vacinas Cachorro: ");
+			for(int indice = 0; indice < VacinasCachorro.size(); indice++) {
+				int ivacina = indice+1;
+				String vacinaCachorro = VacinasGato.get(ivacina);
+				System.out.println(ivacina + " - " + vacinaCachorro);
+			}
+			System.out.println("Informe o tipo de vacina: ");
+			tipoVacina = leia.nextInt();
+			
+			switch(tipoVacina){
+				case 1:
+					valor = 150;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+					
+				case 2:
+					valor = 100;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+					
+				case 3:
+					valor = 60;
+					valorTotal += valor;
+					valorTotalDia = valorTotal;
+					break;
+					
+				default: 
+					System.out.println("Não trabalhamos com este tipo de vacina!");
+					break;
+			}
+		}
+	}
 }

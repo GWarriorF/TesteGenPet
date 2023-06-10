@@ -110,7 +110,7 @@ public class MenuPet {
 			}
 		}
 	}
-<<<<<<< HEAD
+
 
 	public static void keyPress() {
 		try {
@@ -124,6 +124,3 @@ public class MenuPet {
 		}
 	}
 }
-=======
-}
->>>>>>> d03228bf02c2e82877a06b3fb76392841b3af685
