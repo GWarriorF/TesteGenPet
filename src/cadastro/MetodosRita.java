@@ -8,7 +8,7 @@ import cadastro.modelo.CadastroAnimal;
 import cadastro.modelo.CadastroAnimalGato;
 import cadastro.AnimalModelo.CadastroAnimalCachorro;
 
-public class MetodosRitaGato{
+public class MetodosRita{
 	
 	
 	
