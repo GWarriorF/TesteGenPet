@@ -80,11 +80,9 @@ public class MenuPet {
 				System.out.println("Busca Animal");
 				break;
 			case 4:
-<<<<<<< HEAD
+
 				System.out.println("para finalizar pagamento");
-				ficha.castrar();
-=======
->>>>>>> c71f44de860a7eb1c25822be9573ef83891e6ef7
+
 				System.out.println("Atualizar animal");
 				break;
 			case 5:

@@ -33,7 +33,7 @@ public class CadastroAnimalGato extends CadastroAnimal {
 		this.raca = raca;
 	}
 
-	public static List<String> getRacas() {
+	public static List <String> getRacas() {
 		racas = new ArrayList<>();
 		racas.add("SRC *Sem Raça Definida*");
 		racas.add("Abissínio");
