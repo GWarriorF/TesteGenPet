@@ -69,6 +69,7 @@ public class MenuPet {
 				break;
 			case 4:
 				System.out.println("para finalizar pagamento");
+				ficha.castrar();
 				keyPress();
 				break;
 			case 5:
