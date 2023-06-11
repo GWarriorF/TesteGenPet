@@ -143,6 +143,7 @@ public class MetodosMenu implements MenuRepositorio {
 		}
 	}
 
+
 	// Listar Gato
 	@Override
 	public void listarGato() {
@@ -189,60 +190,64 @@ public class MetodosMenu implements MenuRepositorio {
 		listarGato();
 		listarCachorro();
 	}
-
-	// Print Gato
-	@Override
-	public void printCadastroGato() {
-		Iterator<CadastroAnimalGato> iFichaGato = listaCadastroGato.iterator();
-
-		if (especie.equals("Felina")) {
-
-			if (iFichaGato.hasNext()) {
-				CadastroAnimalGato fichaGato = iFichaGato.next();
-				System.out.println("\n*--------*--------*-------*-----*");
-				System.out.println("\tDados do seu Pet ");
-				System.out.println("*--------*--------*-------*-----*");
-				System.out.println("\tPeso: " + fichaGato.getPeso());
-				System.out.println("\tNome do Tutor: " + fichaGato.getNomeDono());
-				System.out.println("\tCor: " + fichaGato.getCor());
-				System.out.println("\tSexo: " + fichaGato.getSexo());
-				System.out.println("\tEspecie:" + fichaGato.getEspecie());
-				System.out.println("\tEndereço:" + fichaGato.getEndereco());
-				System.out.println("\tIdade: " + fichaGato.getIdade());
-				System.out.println("\tCPF: " + fichaGato.getCpf());
-				System.out.println("\tNome Animal:" + fichaGato.getNomeAnimal());
-				System.out.println("\tTipo de Pelo " + fichaGato.getPelo());
-				System.out.println("\tRaça:" + fichaGato.getRaca());
+	
+	
+	//Print Gato
+	 	public void printCadastroGato() 
+		{
+			Iterator<CadastroAnimalGato> iFichaGato = listaCadastroGato.iterator();
+			
+			if(especie.equals("Gato"))
+			{
+				
+				if(iFichaGato.hasNext()) 
+				{
+					CadastroAnimalGato fichaGato = iFichaGato.next();
+					System.out.println("\n*--------*--------*-------*-----*");
+					System.out.println("\tDados do seu Pet ");
+					System.out.println("*--------*--------*-------*-----*");
+					System.out.println("\tPeso: " + fichaGato.getPeso());
+					System.out.println("\tNome Tutor: " + fichaGato.getNomeDono());
+					System.out.println("\tCor: " + fichaGato.getCor());
+					System.out.println("\tSexo: " + fichaGato.getSexo());
+					System.out.println("\tEspecie:" + fichaGato.getEspecie());
+					System.out.println("\tEndereço:" + fichaGato.getEndereco());
+					System.out.println("\tIdade: " + fichaGato.getIdade());
+					System.out.println("\tDono Cpf: " + fichaGato.getCpf());
+					System.out.println("\tNome Animal:" + fichaGato.getNomeAnimal());
+					System.out.println("\tTipo de Pelo " + fichaGato.getPelo());
+					System.out.println("\tRaça:" + fichaGato.getRaca());
+				}
 			}
 		}
-	}
-
-	// Print Cachorro
-	@Override
-	public void printCadastroCachorro() {
-
-		Iterator<CadastroAnimalCachorro> iFichaCachorro = listaCadastroCachorro.iterator();
-
-		if (especie.equalsIgnoreCase("Canina")) {
-			if (iFichaCachorro.hasNext()) {
-				CadastroAnimalCachorro fichaCachorro = iFichaCachorro.next();
-				System.out.println("\n*--------*--------*-------*-----*");
-				System.out.println("\tDados do seu Pet ");
-				System.out.println("*--------*--------*-------*-----*");
-				System.out.println("\nPeso: " + fichaCachorro.getPeso());
-				System.out.println("\nNome Dono: " + fichaCachorro.getNomeDono());
-				System.out.println("\nCor: " + fichaCachorro.getCor());
-				System.out.println("\nSexo: " + fichaCachorro.getSexo());
-				System.out.println("\nEspecie:" + fichaCachorro.getEspecie());
-				System.out.println("\nEndereço:" + fichaCachorro.getEndereco());
-				System.out.println("\nIdade: " + fichaCachorro.getIdade());
-				System.out.println("\nDono Cpf: " + fichaCachorro.getCpf());
-				System.out.println("\nNome Animal:" + fichaCachorro.getNomeAnimal());
-				System.out.println("\nTipo de Pelo " + fichaCachorro.getTipoPeloCachorro());
-				System.out.println("\nRaça:" + fichaCachorro.getRacaCachorro());
+		
+		//Print Cachorro
+		public void printCadastroCachorro(){
+			
+			Iterator<CadastroAnimalCachorro> iFichaCachorro = listaCadastroCachorro.iterator();
+			
+			if(especie.equalsIgnoreCase("Cachorro")) 
+			{	
+				if (iFichaCachorro.hasNext()) 
+				{
+					CadastroAnimalCachorro fichaCachorro = iFichaCachorro.next();
+					System.out.println("\n*--------*--------*-------*-----*");
+					System.out.println("\tDados do seu Pet ");
+					System.out.println("*--------*--------*-------*-----*");
+					System.out.println("\nPeso: " + fichaCachorro.getPeso());
+					System.out.println("\nNome Dono: " + fichaCachorro.getNomeDono());
+					System.out.println("\nCor: " + fichaCachorro.getCor());
+					System.out.println("\nSexo: " + fichaCachorro.getSexo());
+					System.out.println("\nEspecie:" + fichaCachorro.getEspecie());
+					System.out.println("\nEndereço:" + fichaCachorro.getEndereco());
+					System.out.println("\nIdade: " + fichaCachorro.getIdade());
+					System.out.println("\nDono Cpf: " + fichaCachorro.getCpf());
+					System.out.println("\nNome Animal:" + fichaCachorro.getNomeAnimal());
+					System.out.println("\nTipo de Pelo " + fichaCachorro.getTipoPeloCachorro());
+					System.out.println("\nRaça:" + fichaCachorro.getRacaCachorro());
+				}
 			}
 		}
-	}
 	@Override
 	public void atualizarCadastro() {
 		listarPets();
