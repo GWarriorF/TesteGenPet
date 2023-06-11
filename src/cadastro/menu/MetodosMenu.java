@@ -150,8 +150,52 @@ public class MetodosMenu
 		}
 	}
 	
+	//Listar Gato
+	public void listarGato() 
+	{
+		for(CadastroAnimalGato listarGato : listaCadastroGato) 
+		{
+			System.out.println("\n*--------*--------*-------*-----*");
+			System.out.println("\tLista Cadastro: ");
+			System.out.println("*--------*--------*-------*-----*");
+			System.out.println("\tPeso: " + listarGato.getPeso());
+			System.out.println("\tNome Tutor: " + listarGato.getNomeDono());
+			System.out.println("\tCor: " + listarGato.getCor());
+			System.out.println("\tSexo: " + listarGato.getSexo());
+			System.out.println("\tEspecie:" + listarGato.getEspecie());
+			System.out.println("\tEndereço:" + listarGato.getEndereco());
+			System.out.println("\tIdade: " + listarGato.getIdade());
+			System.out.println("\tDono Cpf: " + listarGato.getCpf());
+			System.out.println("\tNome Animal:" + listarGato.getNomeAnimal());
+			System.out.println("\tTipo de Pelo " + listarGato.getPelo());
+			System.out.println("\tRaça:" + listarGato.getRaca());
+		}
+	}
+	
+	//Listar Gato
+	public void listarCachorro() 
+	{
+		for(CadastroAnimalCachorro listarCachorro : listaCadastroCachorro) 
+		{
+			System.out.println("\n*--------*--------*-------*-----*");
+			System.out.println("\tLista Cadastro: ");
+			System.out.println("*--------*--------*-------*-----*");
+			System.out.println("\tPeso: " + listarCachorro.getPeso());
+			System.out.println("\tNome Tutor: " + listarCachorro.getNomeDono());
+			System.out.println("\tCor: " + listarCachorro.getCor());
+			System.out.println("\tSexo: " + listarCachorro.getSexo());
+			System.out.println("\tEspecie:" + listarCachorro.getEspecie());
+			System.out.println("\tEndereço:" + listarCachorro.getEndereco());
+			System.out.println("\tIdade: " + listarCachorro.getIdade());
+			System.out.println("\tDono Cpf: " + listarCachorro.getCpf());
+			System.out.println("\tNome Animal:" + listarCachorro.getNomeAnimal());
+			System.out.println("\tTipo de Pelo " + listarCachorro.getTipoPeloCachorro());
+			System.out.println("\tRaça:" + listarCachorro.getRacaCachorro());
+		}
+	}
+	
 	//Print Gato
-	public void printCadastroGato() 
+ 	public void printCadastroGato() 
 	{
 		Iterator<CadastroAnimalGato> iFichaGato = listaCadastroGato.iterator();
 		
