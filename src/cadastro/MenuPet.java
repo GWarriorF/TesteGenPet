@@ -49,8 +49,10 @@ public class MenuPet {
 					"*    8 - " + Cores.TEXT_YELLOW_BRIGHT + "Agendar Banho e Tosa" + Cores.TEXT_RESET + "          *");
 			System.out.println(
 					"*    9 - " + Cores.TEXT_YELLOW_BRIGHT + "Agendar Castração" + Cores.TEXT_RESET + "             *");
-			System.out.println("*    10 - " + Cores.TEXT_RED_BOLD_BRIGHT + "Sair" + Cores.TEXT_RESET
-					+ "                          *");
+			System.out.println(
+					"*    10 - " + Cores.TEXT_YELLOW_BRIGHT + "Finalizar Cadastro       " + Cores.TEXT_RESET + "    *");
+			System.out.println("*    11 - " + Cores.TEXT_RED_BOLD_BRIGHT + "Sair" + Cores.TEXT_RESET
+					+ "                         *");
 			System.out.println("|                                      |");
 			System.out.println("  *--------*--------*--------*-------*");
 			System.out.println("                                       ");
@@ -64,17 +66,17 @@ public class MenuPet {
 				continue; // Volta ao início do loop
 			}
 
-			if (exibicao == 10) {
+			/*if (exibicao == 10) {
 				System.out.println("\nObrigado pela confiança. Volte sempre!");
 				ler.close();
 				System.exit(0);
-			}
+			}*/
 
 			switch (exibicao) {
 			case 1:
 				ficha.cadastrar();
 				ficha.cadastrarGato();
-				ficha.banhoCachorro();
+				ficha.cadastrarCachorro();
 				break;
 			case 2:
 				ficha.listarPets();
@@ -91,17 +93,60 @@ public class MenuPet {
 			case 6:
 				break;
 			case 7:
-				System.out.println("Vacinas");
+				try {
+				ficha.vacinarGato();
+				ficha.vacinarCachorro();
+				}catch(NullPointerException e)
+				{
+					System.out.println("\n  *--------*--------*--------*-------*");
+					System.out.println("            Cadastro pendente         ");
+					System.out.println("  *--------*--------*--------*-------*");
+				}
 				break;
 			case 8:
-				System.out.println("Banho e Tosa");
+				try {
+				ficha.banhoGato();
+				ficha.banhoCachorro();
+				ficha.tosaGato();
+				ficha.tosaCachorro();
+				}catch(NullPointerException e)
+				{
+					System.out.println("\n  *--------*--------*--------*-------*");
+					System.out.println("            Cadastro pendente         ");
+					System.out.println("  *--------*--------*--------*-------*");
+				}
 				break;
 			case 9:
-				System.out.println("Castração");
+				try {
+				ficha.castrarGato();
+				ficha.castrarCachorro();
+				}catch(NullPointerException e)
+				{
+					System.out.println("\n  *--------*--------*--------*-------*");
+					System.out.println("            Cadastro pendente         ");
+					System.out.println("  *--------*--------*--------*-------*");
+				}
 				break;
 			case 10:
-				System.out.println("\n Finalizando Cadastro.");
+				ficha.saidaAnimal();
+				break;
+			case 11:
+				System.out.println("\n  *--------*--------*--------*-------*");
+				System.out.println("           ExpedienteFinalizado      ");
+				System.out.println("  *--------*--------*--------*-------*");
+				
+				System.out.println("\n\n       /^--^\\     /^--^\\     /^--^\\");
+				System.out.println("       \\____/     \\____/     \\____/");
+				System.out.println("       /    \\     /    \\     /    \\");
+				System.out.println("      |      |   |      |   |      |");
+				System.out.println("      \\__  __/   \\__  __/   \\__  __/");
+				System.out.println("^|^|^|^|^\\ \\^|^|^|^/ /^|^|^|^|^\\ \\^|^|^|^|^|");
+				System.out.println(" | | | | |\\ \\| | |/ /| | | | | |\\ \\ | | | |");
+				System.out.println("##########/ /#####\\ \\###########/ /##########");
+				System.out.println("| | | | | \\/| | | |\\/| | | | | |\\/ | | | | |");
+				System.out.println("_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|");
 				exibir = false;
+				break;
 			default:
 				System.out.println("Opção Inválida. Tente Novamente.");
 				break;
