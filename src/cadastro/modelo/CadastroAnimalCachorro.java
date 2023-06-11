@@ -40,14 +40,28 @@ public class CadastroAnimalCachorro extends CadastroAnimal
 	public static ArrayList <String> getRacaCachorros()
 	{ 
 		ArrayList <String> racaCachorros = new ArrayList <String>();
+		racaCachorros.add("SRC (Sem Raça Definida)");
+		racaCachorros.add("Beagle");
+		racaCachorros.add("Rottweiler");
+		racaCachorros.add("Boxer");
+		racaCachorros.add("Yorkshire Terrier");
+		racaCachorros.add("Dachshund (Salsicha)");
+		racaCachorros.add("Chihuahua");
+		racaCachorros.add("Border Collie");
+		racaCachorros.add("Maltese");
+		racaCachorros.add("Husky Siberiano");
+		racaCachorros.add("Bichon Frisé");
+		racaCachorros.add("Bernese Mountain Dog");
+		racaCachorros.add("Great Dane (Dogue Alemão)");
 		racaCachorros.add("Labrador");
+		racaCachorros.add("Doberman Pinscher");
 		racaCachorros.add("Golden Retriever");
+		racaCachorros.add("Bulldog Inglês");
 		racaCachorros.add("Bulldog Francês");
 		racaCachorros.add("Poodle");
 		racaCachorros.add("Pintcher");
 		racaCachorros.add("Shih-Tzu");
 		racaCachorros.add("Pastor Alemão");
-		racaCachorros.add("Maltês");
 		return racaCachorros;
 	}
 

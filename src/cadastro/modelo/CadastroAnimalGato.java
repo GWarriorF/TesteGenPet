@@ -36,7 +36,7 @@ public class CadastroAnimalGato extends CadastroAnimal {
 
 	public static List <String> getRacas() {
 		racas = new ArrayList<>();
-		racas.add("SRC *Sem Raça Definida*");
+		racas.add("SRC (Sem Raça Definida)");
 		racas.add("Abissínio");
 		racas.add("Bengal");
 		racas.add("Birmanês");
