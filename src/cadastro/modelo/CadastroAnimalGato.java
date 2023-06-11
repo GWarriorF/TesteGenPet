@@ -5,24 +5,24 @@ import java.util.List;
 
 public class CadastroAnimalGato extends CadastroAnimal {
 
-	private int pelo;
+	private String pelo;
 	private static List<String> tipoPelo;
 	private String raca;
 	private static List<String> racas;
 	private static List<String> vacinasG;
 
 	public CadastroAnimalGato(String nomeDono, String endereco, String cpf, String especie, String nomeAnimal,
-			String cor, String sexo, String idade, float peso, int pelo, String raca) {
+			String cor, String sexo, String idade, float peso, String pelo, String raca) {
 		super(nomeDono, endereco, cpf, especie, nomeAnimal, cor, sexo, idade, peso);
 		this.pelo = pelo;
 		this.raca = raca;
 	}
 
-	public int getPelo() {
+	public String getPelo() {
 		return pelo;
 	}
 
-	public void setPelo(int pelo) {
+	public void setPelo(String pelo) {
 		this.pelo = pelo;
 	}
 

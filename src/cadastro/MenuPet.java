@@ -2,7 +2,7 @@ package cadastro;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+import cadastro.menu.MetodosMenu;
 import cadastro.menu.metodosThayron;
 import util.Cores;
 
@@ -75,14 +75,14 @@ public class MenuPet {
 				break;
 			case 2:
 				System.out.println("Pets Cadastrados: ");
-				ficha.listarCadastros();
+				ficha.printCadastro();
 				break;
 			case 3:
 				System.out.println("Busca Animal");
 				break;
 			case 4:
 				System.out.println("Atualizar animal");
-				System.out.println("Animal atualizado com sucesso!");
+				ficha.atualizarCadastro();
 				break;
 			case 5:
 				System.out.println("Remover animal");

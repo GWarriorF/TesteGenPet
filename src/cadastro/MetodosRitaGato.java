@@ -1,11 +1,13 @@
-package cadastro;
+/*	package cadastro;
 
+
+import procedimentos.Vacina;
 import cadastro.modelo.CadastroAnimalGato;
 
 public class MetodosRitaGato extends CadastroAnimalGato {
 	
 	public MetodosRitaGato(String nomeAnimal, String nomeDono, String cor, String sexo, String especie, String endereco,
-			String idade, String cpf, float peso, int pelo, String raca) {
+			String idade, String cpf, float peso, String pelo, String raca) {
 		super(nomeAnimal, nomeDono, cor, sexo, especie, endereco, idade, cpf, peso, pelo, raca);
 		
 	}
@@ -70,3 +72,5 @@ public class MetodosRitaGato extends CadastroAnimalGato {
 
 	
 }
+
+*/	
