@@ -32,6 +32,9 @@ public class MenuTestes {
 				case 1 ->
 				{
 					ficha.cadastrar();
+					ler.nextLine();
+					ficha.cadastrarGato();
+					ficha.cadastrarCachorro();
 					
 					KeyPress();
 				}
@@ -43,7 +46,6 @@ public class MenuTestes {
 				}
 				case 3 ->
 				{
-					ficha.castrar();
 					
 					KeyPress();
 				}

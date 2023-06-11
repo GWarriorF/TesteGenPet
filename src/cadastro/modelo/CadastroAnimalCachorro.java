@@ -71,52 +71,6 @@ public class CadastroAnimalCachorro extends CadastroAnimal
 		CadastroAnimalCachorro.tipoPeloCachorros = tipoPeloCachorros;
 	}
 	
-	/*//Metodos Feitos pela Gabi
-	public int escolherTipoPelosCachorro()
-	{
-		Scanner leia = new Scanner(System.in);
-		int iCachorro, posicaoCachorro = 0;
-		ArrayList<String> pelosCachorro = CadastroAnimalCachorro.getTipoPeloCachorros();
-		int lerInteiro; 
-		
-		System.out.println("\n*--------*--------*-------*-----*");
-		System.out.println("\tTipos de Pelo: ");
-		System.out.println("*--------*--------*-------*-----*");
-		
-		for(iCachorro = 0; iCachorro < pelosCachorro.size(); iCachorro++ ) 
-		{
-			posicaoCachorro = iCachorro + 1;
-			String peloCachorro = pelosCachorro.get(posicaoCachorro);
-			System.out.println("\t" + posicaoCachorro + " - " + peloCachorro);
-		}
-		System.out.println("Escolha o tipo de pelo: ");
-		lerInteiro = leia.nextInt();
-		return lerInteiro;
-	}
-	
-	public String escolherRacasCachorro() 
-	{
-		Scanner leia = new Scanner(System.in);
-		int lerInteiro;
-		String lerString; 
-		int iCachorro, posicaoCachorro = 0;
-		ArrayList<String> racasCachorro = CadastroAnimalCachorro.getRacaCachorros();
-		
-		System.out.println("\n*--------*--------*-------*-----*");
-		System.out.println("\tTipos de Raças: ");
-		System.out.println("*--------*--------*-------*-----*");
-		
-		for(iCachorro = 0; iCachorro < racasCachorro.size(); iCachorro++ ) 
-		{
-			posicaoCachorro = iCachorro + 1;
-			String racaCachorro = racasCachorro.get(posicaoCachorro);
-			System.out.println("\t" + posicaoCachorro + " - " + racasCachorro);
-		}
-		System.out.println("Escolha o tipo de raça: ");
-		lerInteiro = leia.nextInt();
-		lerString = racasCachorro.get(lerInteiro);
-		return lerString;
-		
-	}*/
+
 
 }

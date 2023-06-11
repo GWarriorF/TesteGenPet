@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import cadastro.modelo.CadastroAnimal;
 import cadastro.modelo.CadastroAnimalGato;
-import cadastro.AnimalModelo.CadastroAnimalCachorro;
 
 public class MetodosRita{
 
@@ -14,9 +13,9 @@ public class MetodosRita{
 	
 	float valor, valorTotal, valorTotalDia;
 	
-	public void banho()
+/*	public void banho()
 	{
-		CadastroAnimalGato fichaGato = new CadastroAnimalGato(null, null, null, null, null, null, null, null, 0.0f, 0, null);
+		CadastroAnimalGato fichaGato = new CadastroAnimalGato(null, null, null, null, null, null, null, null, 0.0f, null, null);
 		CadastroAnimalCachorro fichaCachorro = new CadastroAnimalCachorro(null, null, null, null, null, null, null, null, 0.0f, 0, null);
 		CadastroAnimal conferirEspecie = new CadastroAnimal(null, null, null, null, null, null, null, null, valor);
 		
@@ -48,9 +47,12 @@ public class MetodosRita{
 					valorTotal += valor;
 					valorTotalDia = valorTotal;
 					break;
+					
+				default:
+					System.out.println("Tipo de Pelo inválido!");
+					
 			}
 		}
-		
 		
 		if(conferirEspecie.getEspecie().equalsIgnoreCase("Cachorro")) 
 		{
@@ -91,21 +93,17 @@ public class MetodosRita{
 					valorTotal += valor;
 					valorTotalDia = valorTotal;
 					break;
+				default: 
+					System.out.println("Tipo de Pelo inválido!");
 			}
 		}
-		
-		
-		else
-		{
-			System.out.println("Tipo de Pelo inválido!");
-		}
-	}
+	}*/
 	
 	
 	
-	public void tosa()
+	/*public void tosa()
 	{
-		CadastroAnimalGato fichaGato = new CadastroAnimalGato(null, null, null, null, null, null, null, null, 0.0f, 0, null);
+		CadastroAnimalGato fichaGato = new CadastroAnimalGato(null, null, null, null, null, null, null, null, 0.0f, null, null);
 		CadastroAnimalCachorro fichaCachorro = new CadastroAnimalCachorro(null, null, null, null, null, null, null, null, 0.0f, 0, null);
 		CadastroAnimal conferirEspecie = new CadastroAnimal(null, null, null, null, null, null, null, null, valor);
 		
@@ -174,11 +172,11 @@ public class MetodosRita{
 		{
 			System.out.println("Tipo de Pelo inválido!");
 		}
-	}
+	}*/
 	
 	
 	
-	public void vacina()
+	/*public void vacina()
 	{
 		ArrayList<String> VacinasGato = Vacina.getVacinaGato();
 		ArrayList<String> VacinasCachorro = Vacina.getVacinaCachorro();
@@ -261,6 +259,7 @@ public class MetodosRita{
 					break;
 			}
 		}
+<<<<<<< HEAD
 	}
 }
 	
