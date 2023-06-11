@@ -1,5 +1,6 @@
 package cadastro;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -56,8 +57,7 @@ public class MenuPet {
 			System.out.println("|                                      |");
 			System.out.println("  *--------*--------*--------*-------*");
 			System.out.println("                                       ");
-			System.out.println("Digite o número da opção desejada: ");
-
+			System.out.print("Digite o número da opção desejada: ");
 			try {
 				exibicao = ler.nextInt();
 			} catch (InputMismatchException e) {
@@ -72,25 +72,39 @@ public class MenuPet {
 				System.exit(0);
 			}*/
 
-			switch (exibicao) {
+			switch (exibicao) { 
 			case 1:
 				ficha.cadastrar();
 				ficha.cadastrarGato();
 				ficha.cadastrarCachorro();
+				KeyPress(); 
 				break;
 			case 2:
 				ficha.listarPets();
+				KeyPress(); 
 				break;
 			case 3:
 				System.out.println("Busca Animal");
+				KeyPress();
 				break;
 			case 4:
 				ficha.atualizarCadastro();
+				KeyPress(); 
 				break;
 			case 5:
 				ficha.removerCadastro();
+				KeyPress(); 
 				break;
 			case 6:
+				try{
+				ficha.consulta();
+				}catch(NullPointerException e)
+				{
+					System.out.println("\n  *--------*--------*--------*-------*");
+					System.out.println("            Cadastro pendente         ");
+					System.out.println("  *--------*--------*--------*-------*");
+				}
+				KeyPress();
 				break;
 			case 7:
 				try {
@@ -102,6 +116,7 @@ public class MenuPet {
 					System.out.println("            Cadastro pendente         ");
 					System.out.println("  *--------*--------*--------*-------*");
 				}
+				KeyPress();
 				break;
 			case 8:
 				try {
@@ -115,6 +130,7 @@ public class MenuPet {
 					System.out.println("            Cadastro pendente         ");
 					System.out.println("  *--------*--------*--------*-------*");
 				}
+				KeyPress();
 				break;
 			case 9:
 				try {
@@ -126,31 +142,45 @@ public class MenuPet {
 					System.out.println("            Cadastro pendente         ");
 					System.out.println("  *--------*--------*--------*-------*");
 				}
+				KeyPress();
 				break;
 			case 10:
 				ficha.saidaAnimal();
+				KeyPress();
 				break;
 			case 11:
 				System.out.println("\n  *--------*--------*--------*-------*");
 				System.out.println("           ExpedienteFinalizado      ");
 				System.out.println("  *--------*--------*--------*-------*");
 				
-				System.out.println("\n\n       /^--^\\     /^--^\\     /^--^\\");
-				System.out.println("       \\____/     \\____/     \\____/");
-				System.out.println("       /    \\     /    \\     /    \\");
-				System.out.println("      |      |   |      |   |      |");
-				System.out.println("      \\__  __/   \\__  __/   \\__  __/");
-				System.out.println("^|^|^|^|^\\ \\^|^|^|^/ /^|^|^|^|^\\ \\^|^|^|^|^|");
-				System.out.println(" | | | | |\\ \\| | |/ /| | | | | |\\ \\ | | | |");
-				System.out.println("##########/ /#####\\ \\###########/ /##########");
-				System.out.println("| | | | | \\/| | | |\\/| | | | | |\\/ | | | | |");
-				System.out.println("_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|");
+				System.out.println("\n\n      /^--^\\     /^--^\\     /^--^\\");
+				System.out.println("      \\____/     \\____/     \\____/");
+				System.out.println("      /    \\     /    \\     /    \\");
+				System.out.println("     |      |   |      |   |      |");
+				System.out.println("     \\__  __/   \\__  __/   \\__  __/");
+				System.out.println("|^|^|^|^\\ \\^|^|^|^/ /^|^|^|^|^\\ \\^|^|^|^|");
+				System.out.println("| | | | |\\ \\| | |/ /| | | | | |\\ \\| | | |");
+				System.out.println("#########/ /#####\\ \\###########/ /#######");
+				System.out.println(" | | | | \\/| | | |\\/| | | | | |\\/ | | | |");
+				System.out.println("|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|");
 				exibir = false;
 				break;
 			default:
 				System.out.println("Opção Inválida. Tente Novamente.");
+				KeyPress(); 
 				break;
 			}
 		}
 	}
+	
+	public static void KeyPress() 
+	{
+        try 
+        {
+            System.out.println("\nPressione Enter para Continuar ...");
+            System.in.read();
+        } catch (IOException e) {
+            System.out.println("Você pressionou uma tecla diferente de enter!");
+        }
+    }
 }

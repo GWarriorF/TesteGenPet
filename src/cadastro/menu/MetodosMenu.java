@@ -211,7 +211,7 @@ public class MetodosMenu implements MenuRepositorio {
 				CadastroAnimalGato fichaGato = iFichaGato.next();
 				System.out.println("\n  *--------*--------*--------*-------*");
 				System.out.println("           Dados do seu Pet ");
-				System.out.println("  *--------*--------*-------*-----*");
+				System.out.println("  *--------*--------*--------*-------*");
 				System.out.println("Peso: " + fichaGato.getPeso());
 				System.out.println("Nome Tutor: " + fichaGato.getNomeDono());
 				System.out.println("Cor: " + fichaGato.getCor());
@@ -240,7 +240,7 @@ public class MetodosMenu implements MenuRepositorio {
 				CadastroAnimalCachorro fichaCachorro = iFichaCachorro.next();
 				System.out.println("\n  *--------*--------*--------*-------*");
 				System.out.println("           Dados do seu Pet ");
-				System.out.println("  *--------*--------*-------*-----*");
+				System.out.println("  *--------*--------*--------*-------*");
 				System.out.println("Peso: " + fichaCachorro.getPeso());
 				System.out.println("Nome Dono: " + fichaCachorro.getNomeDono());
 				System.out.println("Cor: " + fichaCachorro.getCor());
@@ -297,6 +297,7 @@ public class MetodosMenu implements MenuRepositorio {
 			System.out.println("Pet não encontrado.");
 		}
 	}
+	
 	@Override
 	public void removerCadastro() {
 		listarPets();
@@ -415,28 +416,28 @@ public class MetodosMenu implements MenuRepositorio {
 	@Override
 	public void banhoGato() {
 		if (especie.replaceAll("\\s", "").equalsIgnoreCase("Felino")) {
-			if (pelo.equalsIgnoreCase("Curto")) {
+			if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Curto")) {
 				valor = 30;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
 				System.out.println("\n  *--------*--------*--------*-------*");
 				System.out.println("         Valor do banho Acrescentado     ");
 				System.out.println("  *--------*--------*--------*-------*");
-			} else if (pelo.equalsIgnoreCase("Médio")) {
+			} else if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Médio")) {
 				valor = 40;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
 				System.out.println("\n  *--------*--------*--------*-------*");
 				System.out.println("         Valor do banho Acrescentado     ");
 				System.out.println("  *--------*--------*--------*-------*");
-			} else if (pelo.equalsIgnoreCase("Longo")) {
+			} else if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Longo")) {
 				valor = 50;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
 				System.out.println("\n  *--------*--------*--------*-------*");
 				System.out.println("         Valor do banho Acrescentado     ");
 				System.out.println("  *--------*--------*--------*-------*");
-			} else if (pelo.equalsIgnoreCase("Sem pelos")) {
+			} else if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Sem pelo")) {
 				valor = 80;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
@@ -455,50 +456,49 @@ public class MetodosMenu implements MenuRepositorio {
 	@Override
 	public void banhoCachorro() {
 		if (especie.replaceAll("\\s", "").equalsIgnoreCase("Canina")) {
-			if (pelo.equalsIgnoreCase("Curto")) {
+			if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Curto")) {
 				valor = 120;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
 				System.out.println("\n  *--------*--------*--------*-------*");
 				System.out.println("         Valor do banho Acrescentado     ");
 				System.out.println("  *--------*--------*--------*-------*");
-			} else if (pelo.equalsIgnoreCase("Médio")) {
+			} else if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Médio")) {
 				valor = 150;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
 				System.out.println("\n  *--------*--------*--------*-------*");
 				System.out.println("         Valor do banho Acrescentado     ");
 				System.out.println("  *--------*--------*--------*-------*");
-			} else if (pelo.equalsIgnoreCase("Longo")) {
+			} else if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Longo")) {
 				valor = 270;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
 				System.out.println("\n  *--------*--------*--------*-------*");
 				System.out.println("         Valor do banho Acrescentado     ");
 				System.out.println("  *--------*--------*--------*-------*");
-			} else if (pelo.equalsIgnoreCase("Sem pelos")) {
+			} else if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Sem pelo")) {
 				valor = 150;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
 				System.out.println("\n  *--------*--------*--------*-------*");
 				System.out.println("         Valor do banho Acrescentado     ");
 				System.out.println("  *--------*--------*--------*-------*");
-			} else if (pelo.equalsIgnoreCase("Pelagem Dupla")) {
+			} else if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Pelagem Dupla")) {
 				valor = 180;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
 				System.out.println("\n  *--------*--------*--------*-------*");
 				System.out.println("         Valor do banho Acrescentado     ");
 				System.out.println("  *--------*--------*--------*-------*");
-			} else if (pelo.equalsIgnoreCase("Pelo Encaracolado")) {
+			} else if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Encaracolado")) {
 				valor = 130;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
 				System.out.println("\n  *--------*--------*--------*-------*");
 				System.out.println("         Valor do banho Acrescentado     ");
 				System.out.println("  *--------*--------*--------*-------*");
-			}else
-			{
+			}else{
 				System.out.println("Tipo de Pelo inválido!");
 			}
 
@@ -508,23 +508,30 @@ public class MetodosMenu implements MenuRepositorio {
 	// Tosa Gato Rita
 	@Override
 	public void tosaGato() {
-		System.out.println("\n  *--------*--------*--------*-------*");
-		System.out.println("         Valor da tosa Acrescentado     ");
-		System.out.println("  *--------*--------*--------*-------*");
 		
-		if (especie.replaceAll("\\s", "").equalsIgnoreCase("Felino")) {
-			if (pelo.equalsIgnoreCase("Curto")) {
+		if (especie.replaceAll("\\s", "").equalsIgnoreCase("Felino")) 
+		{
+			if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Curto")) {
 				valor = 50;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
-			} else if (pelo.equalsIgnoreCase("Médio")) {
+				System.out.println("\n  *--------*--------*--------*-------*");
+				System.out.println("         Valor da tosa Acrescentado     ");
+				System.out.println("  *--------*--------*--------*-------*");
+			} else if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Médio")) {
 				valor = 60;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
-			} else if (pelo.equalsIgnoreCase("Longo")) {
+				System.out.println("\n  *--------*--------*--------*-------*");
+				System.out.println("         Valor da tosa Acrescentado     ");
+				System.out.println("  *--------*--------*--------*-------*");
+			} else if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Longo")) {
 				valor = 75;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
+				System.out.println("\n  *--------*--------*--------*-------*");
+				System.out.println("         Valor da tosa Acrescentado     ");
+				System.out.println("  *--------*--------*--------*-------*");
 			} else {
 				System.out.println("Tipo de Pelo inválido!");
 			}
@@ -607,9 +614,9 @@ public class MetodosMenu implements MenuRepositorio {
 
 			for (int indice = 0; indice < VacinasCachorro.size(); indice++) {
 				String vacinaCachorro = VacinasCachorro.get(indice);
-				System.out.println((indice + 1) + " - " + vacinaCachorro);
+				System.out.println("\n" +(indice + 1) + " - " + vacinaCachorro);
 			}
-			System.out.print("\n  Informe o tipo de vacina: ");
+			System.out.print("\nInforme o tipo de vacina: ");
 			tipoVacina = leia.nextInt();
 
 			switch (tipoVacina) {
@@ -649,31 +656,43 @@ public class MetodosMenu implements MenuRepositorio {
 	// Tosa Cachorro
 	@Override
 	public void tosaCachorro() {
-		System.out.println("\n  *--------*--------*--------*-------*");
-		System.out.println("        Valor da tosa Acrescentado     ");
-		System.out.println("  *--------*--------*--------*-------*");
 
 		if (especie.replaceAll("\\s", "").equalsIgnoreCase("Canina")) {
-			if (pelo.equalsIgnoreCase("Curto")) {
+			if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Curto")) {
 				valor = 120;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
-			} else if (pelo.equalsIgnoreCase("Médio")) {
+				System.out.println("\n  *--------*--------*--------*-------*");
+				System.out.println("        Valor da tosa Acrescentado     ");
+				System.out.println("  *--------*--------*--------*-------*");
+			} else if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Médio")) {
 				valor = 180;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
-			} else if (pelo.equalsIgnoreCase("Longo")) {
+				System.out.println("\n  *--------*--------*--------*-------*");
+				System.out.println("        Valor da tosa Acrescentado     ");
+				System.out.println("  *--------*--------*--------*-------*");
+			} else if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Longo")) {
 				valor = 270;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
-			} else if (pelo.equalsIgnoreCase("Pelagem Dupla")) {
+				System.out.println("\n  *--------*--------*--------*-------*");
+				System.out.println("        Valor da tosa Acrescentado     ");
+				System.out.println("  *--------*--------*--------*-------*");
+			} else if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Pelagem Dupla")) {
 				valor = 130;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
-			} else if (pelo.equalsIgnoreCase("Pelo Encaracolado")) {
+				System.out.println("\n  *--------*--------*--------*-------*");
+				System.out.println("        Valor da tosa Acrescentado     ");
+				System.out.println("  *--------*--------*--------*-------*");
+			} else if (pelo.replaceAll("\\s", "").equalsIgnoreCase("Encaracolado")) {
 				valor = 150;
 				valorTotal += valor;
 				valorTotalDia = valorTotal;
+				System.out.println("\n  *--------*--------*--------*-------*");
+				System.out.println("        Valor da tosa Acrescentado     ");
+				System.out.println("  *--------*--------*--------*-------*");
 			} else {
 				System.out.println("Tipo de Pelo inválido!");
 			}
@@ -747,17 +766,17 @@ public class MetodosMenu implements MenuRepositorio {
 		System.out.println("  *--------*--------*--------*-------*");
 		
 		valorTotal = 0.0f;
-		especie = "";
-		nomeTutor = "";
-		cpf = "";
-		endereco = ""; 
-		nomeAnimal = ""; 
-		cor = "";
-		sexo = "";
-		idade = ""; 
-		especie = "";
-		pelo = "";
-		raca = "";
+		especie = null;
+		nomeTutor = null;
+		cpf = null;
+		endereco = null; 
+		nomeAnimal = null; 
+		cor = null;
+		sexo = null;
+		idade = null; 
+		especie = null;
+		pelo = null;
+		raca = null;
 		peso = 0.0f;
 	}
 

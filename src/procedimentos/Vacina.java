@@ -41,13 +41,13 @@ public class Vacina
 	{
 		VacinaCachorro = new ArrayList<>();
 		
-		VacinaCachorro.add("V10: Protege contra cinomose, coronavirose, hepatite infecciosa canina, "
-						+ "leptospirose (sorovares Canicola, Icterohaemorrhagiae, Grippotyphosa e Pomona), "
+		VacinaCachorro.add("V10: Protege contra cinomose, coro\nnavirose, hepatite infecciosa canina, "
+						+ "\nleptospirose (sorovares Canicola, Icte\nrohaemorrhagiae, Grippotyphosa e Pomo\nna), "
 																		+ "parainfluenza e parvovirose.");
 		
-		VacinaCachorro.add("V8:  Protege contra cinomose, coronavirose,hepatite infecciosa canina, "
-											+ "leptospirose(sorovares Canicola e Icterohaemorrhagiae),"
-																	+ " parainfluenza e parvovirose.");
+		VacinaCachorro.add("V8: Protege contra cinomose, coro\nnavirose,hepatite infecciosa canina, "
+											+ "\nleptospirose(sorovares Canicola e Icte\nrohaemorrhagiae),"
+																	+ " parainfluenza e par\nvovirose.");
 		
 		VacinaCachorro.add("Antirrábica: Protege contra raiva.");
 		return VacinaCachorro;

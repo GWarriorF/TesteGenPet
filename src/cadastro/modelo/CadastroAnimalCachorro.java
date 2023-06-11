@@ -72,12 +72,12 @@ public class CadastroAnimalCachorro extends CadastroAnimal
 	
 	public static ArrayList <String> getTipoPeloCachorros(){ 
 		ArrayList <String> tipoPeloCachorros = new ArrayList <String>();
-		tipoPeloCachorros.add("Pelo longo");
-		tipoPeloCachorros.add("Pelo curto");
-		tipoPeloCachorros.add("Pelo Médio");
+		tipoPeloCachorros.add("Curto");
+		tipoPeloCachorros.add("Médio");
+		tipoPeloCachorros.add("Longo");
 		tipoPeloCachorros.add("Pelagem Dupla");
-		tipoPeloCachorros.add("Pelo Encaracolado");
-		tipoPeloCachorros.add("Sem pelo");
+		tipoPeloCachorros.add("Encaracolado");
+		tipoPeloCachorros.add("Sem pelos");
 		return tipoPeloCachorros;
 	}
 	public static void setTipoPeloCachorro(ArrayList <String> tipoPeloCachorros) 
