@@ -271,7 +271,6 @@ public class MetodosMenu implements MenuRepositorio {
 					cachorro.setEndereco(novoEndereco);
 					System.out.println("Cadastro atualizado com sucesso!");
 					break;
-					//tem q terminar de preencher o resto do cadastro para atualizar
 				}
 			}
 		}
