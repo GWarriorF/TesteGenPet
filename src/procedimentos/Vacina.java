@@ -41,15 +41,15 @@ public class Vacina
 	{
 		VacinaCachorro = new ArrayList<>();
 		
-		VacinaCachorro.add("\nV10 \nProtege contra: cinomose, coronavirose, hepatite infecciosa canina, "
+		VacinaCachorro.add("V10: Protege contra cinomose, coronavirose, hepatite infecciosa canina, "
 						+ "leptospirose (sorovares Canicola, Icterohaemorrhagiae, Grippotyphosa e Pomona), "
 																		+ "parainfluenza e parvovirose.");
 		
-		VacinaCachorro.add("V8 \n Protege contra: cinomose, coronavirose,hepatite infecciosa canina,"
+		VacinaCachorro.add("V8:  Protege contra cinomose, coronavirose,hepatite infecciosa canina, "
 											+ "leptospirose(sorovares Canicola e Icterohaemorrhagiae),"
 																	+ " parainfluenza e parvovirose.");
 		
-		VacinaCachorro.add("\nAntirrábica \nProtege contra raiva.");
+		VacinaCachorro.add("Antirrábica: Protege contra raiva.");
 		return VacinaCachorro;
 	}
 	
@@ -62,10 +62,10 @@ public class Vacina
 	public static ArrayList<String> getVacinaGato() 
 	{
 		VacinaGato = new ArrayList<>();
-		VacinaGato.add("\nV5 \nProtege contra panleucopenia, calicivirose e rinotraqueíte + Leucemia Felina - FeLV.");
-		VacinaGato.add("\nV4 \nProtege contra panleucopenia, calicivirose, rinotraqueíte e clamidiose.");
-		VacinaGato.add("\nV3 \nProtege contra panleucopenia, calicivirose e rinotraqueíte.");
-		VacinaGato.add("\nAntirrábica \nProtege contra a raiva.");
+		VacinaGato.add("V5: Protege contra panleucopenia, calicivirose e rinotraqueíte + Leucemia Felina - FeLV.");
+		VacinaGato.add("V4: Protege contra panleucopenia, calicivirose, rinotraqueíte e clamidiose.");
+		VacinaGato.add("V3: Protege contra panleucopenia, calicivirose e rinotraqueíte.");
+		VacinaGato.add("Antirrábica: Protege contra a raiva.");
 		return VacinaGato;
 	}
 	

@@ -15,24 +15,23 @@ public class MenuTestes {
 		
 		int opcao;
 		MetodosMenu ficha = new MetodosMenu();
-		Scanner ler = new Scanner(System.in);
-		
-	
-		System.out.println("Menu Teste: \n\n1. Cadastrar \n2. Consulta \n3. Castração \n4. Saida Pet");
-		System.out.println("\nBem vinde a GenPet, ficamos felizes por escolher nossos serviços");
+		Scanner leia = new Scanner(System.in);
 		
 		while (true) 
 		{ 
-			System.out.print("\nDigite a opção Desejada: ");
-			opcao = ler.nextInt();
-	
+			System.out.println("Menu Teste: \n\n1. Cadastrar \n2. Consulta \n3. Castração \n4. Banho \n5. Tosa \n6. Vacinacao"
+					+  "\n7. Listar \n8. Visualizar Cadastro \n9.Saida Pet ");
+			System.out.println("\nBem vinde a GenPet, ficamos felizes por escolher nossos serviços");
 			
+			System.out.print("\nDigite a opção Desejada: ");
+			opcao = leia.nextInt();
+	
+		
 			switch(opcao) 
 			{
 				case 1 ->
 				{
 					ficha.cadastrar();
-					ler.nextLine();
 					ficha.cadastrarGato();
 					ficha.cadastrarCachorro();
 					
@@ -46,15 +45,48 @@ public class MenuTestes {
 				}
 				case 3 ->
 				{
-					
+					ficha.castrarGato();
+					ficha.castrarCachorro();
 					KeyPress();
 				}
 				case 4 -> 
 				{
+					ficha.banhoGato();
+					ficha.banhoCachorro();
+					KeyPress();
+				}
+				case 5 -> 
+				{
+					ficha.tosaGato();
+					ficha.tosaCachorro();
+					KeyPress();
+				}
+				case 6 ->
+				{
+					ficha.vacinarGato();
+					ficha.vacinarCachorro();
+					KeyPress();
+				}
+				case 7 ->
+				{
+					ficha.listarGato();
+					ficha.listarCachorro();
+					KeyPress();
+				}
+				case 8 ->
+				{
+					ficha.printCadastroGato();
+					ficha.printCadastroCachorro();
+					KeyPress();
+				}
+				case 9 ->
+				{
 					ficha.saidaAnimal();
+					KeyPress();
 				}
 				default ->
 				{
+					
 					System.exit(0);
 				}
 				
