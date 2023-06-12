@@ -80,6 +80,7 @@ public class MenuPet {
 
 			switch (exibicao) { 
 			case 1:
+				ficha.cadastroEmAndamento();
 				ficha.cadastrar();
 				ficha.cadastrarGato();
 				ficha.cadastrarCachorro();

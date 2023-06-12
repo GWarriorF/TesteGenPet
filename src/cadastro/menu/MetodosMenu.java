@@ -30,47 +30,49 @@ public class MetodosMenu implements MenuRepositorio {
 	@Override
 	public void cadastrar() 
 	{
-		leia.skip("\\R");
-		System.out.println("\n  *--------*--------*--------*-------*");
-		System.out.println("              Cadastrar Pet           ");
-		System.out.println("  *--------*--------*--------*-------*");
-		System.out.print("Nome do Tutor: ");
-		nomeTutor = leia.nextLine();
+		if (valorTotal == 0.0f && nomeTutor == null) {	
+			leia.skip("\\R");
+			System.out.println("\n  *--------*--------*--------*-------*");
+			System.out.println("              Cadastrar Pet           ");
+			System.out.println("  *--------*--------*--------*-------*");
+			System.out.print("Nome do Tutor: ");
+			nomeTutor = leia.nextLine();
 
-		System.out.print("Número do CPF: ");
-		cpf = leia.nextLine();
+			System.out.print("Número do CPF: ");
+			cpf = leia.nextLine();
 
-		System.out.print("Endereço: ");
-		endereco = leia.nextLine();
+			System.out.print("Endereço: ");
+			endereco = leia.nextLine();
 
-		System.out.print("Nome do Pet: ");
-		nomeAnimal = leia.nextLine();
+			System.out.print("Nome do Pet: ");
+			nomeAnimal = leia.nextLine();
 
-		System.out.print("Cor do Pet: ");
-		cor = leia.nextLine();
+			System.out.print("Cor do Pet: ");
+			cor = leia.nextLine();
 
-		System.out.print("Sexo do Pet: ");
-		sexo = leia.nextLine();
+			System.out.print("Sexo do Pet: ");
+			sexo = leia.nextLine();
 
-		System.out.print("Idade do Pet: ");
-		idade = leia.nextLine();
+			System.out.print("Idade do Pet: ");
+			idade = leia.nextLine();
 
-		System.out.print("Peso do Pet: ");
-		peso = leia.nextFloat();
-		leia.skip("\\R");
+			System.out.print("Peso do Pet: ");
+			peso = leia.nextFloat();
+			leia.skip("\\R");
 
-		System.out.print("Especie do Pet [Felino] ou [Canina]: ");
-		especie = leia.nextLine();
+			System.out.print("Especie do Pet [Felino] ou [Canina]: ");
+			especie = leia.nextLine();
+		}
 	}
 
 	// Cadastro Animal Gato
 	@Override
 	public void cadastrarGato() {
-		if (especie.replaceAll("\\s", "").equalsIgnoreCase("Felino")) {
+		if (especie.replaceAll("\\s", "").equalsIgnoreCase("Felino") && valorTotal == 0.0f && pelo == null) {
 			List<String> racas = CadastroAnimalGato.getRacas();
 			List<String> tipoPelo = CadastroAnimalGato.getTipoPelo();
 			
-			System.out.println("                 |\\__/,|   (`\\");
+			System.out.println("\n                 |\\__/,|   (`\\");
 			System.out.println("               _.|o o  |_   ) )");
 			System.out.println("             -(((---(((--------");
 			
@@ -111,11 +113,11 @@ public class MetodosMenu implements MenuRepositorio {
 	// Cadastro Animal Cachorro
 	@Override
 	public void cadastrarCachorro() {
-		if (especie.replaceAll("\\s", "").equalsIgnoreCase("Canina")) {
+		if (especie.replaceAll("\\s", "").equalsIgnoreCase("Canina") && valorTotal == 0.0f && pelo == null) {
 			ArrayList<String> racasCachorro = CadastroAnimalCachorro.getRacaCachorros();
 			ArrayList<String> pelosCachorro = CadastroAnimalCachorro.getTipoPeloCachorros();
 
-			System.out.println("                        __");
+			System.out.println("\n                        __");
 			System.out.println("            (\\,--------'()'--o");
 			System.out.println("            (_    ___    /~\"");
 			System.out.println("            (_)_)  (_)_)");
@@ -153,7 +155,6 @@ public class MetodosMenu implements MenuRepositorio {
 			indiceCadastro += 1;
 		}
 	}
-
 
 	// Listar Gato
 	@Override
@@ -211,12 +212,13 @@ public class MetodosMenu implements MenuRepositorio {
 			System.out.println("Raça: " + listarCachorro.getRacaCachorro());
 		}
 	}
+	
+	//Junção do listar
 	@Override
 	public void listarPets() {
 		listarGato();
 		listarCachorro();
 	}
-	
 	
 	//Print Gato
 	public void printCadastroGato() 
@@ -290,6 +292,7 @@ public class MetodosMenu implements MenuRepositorio {
 		}
 	}
 	
+	//Atualizar Cadastro
 	@Override
 	public void atualizarCadastro() {
 		listarPets();
@@ -334,6 +337,8 @@ public class MetodosMenu implements MenuRepositorio {
 			System.out.println("Pet não encontrado.");
 		}
 	}
+	
+	//Remover Cadastro
 	
 	@Override
 	public void removerCadastro() {
@@ -381,6 +386,8 @@ public class MetodosMenu implements MenuRepositorio {
 			System.out.println("  *--------*--------*--------*-------*");
 		}
 	}
+	
+	//Possivel lógica para atualizar
 	
 	/*                                                             >> OUTRA LOGICA PARA ATUALIZAR CADASTRO
 	public void atualizarCadastro() {
@@ -456,6 +463,8 @@ public class MetodosMenu implements MenuRepositorio {
 	    System.out.println("Cadastro atualizado com sucesso!");
 	}
 */
+	
+	//Banho Gato
 	// Banho Gato Rita
 	@Override
 	public void banhoGato() {
@@ -496,6 +505,7 @@ public class MetodosMenu implements MenuRepositorio {
 		}
 	}
 
+	//Banho Cachorro 
 	// Banho Cachorro Rita
 	@Override
 	public void banhoCachorro() {
@@ -549,41 +559,7 @@ public class MetodosMenu implements MenuRepositorio {
 		}
 	}
 
-	// Tosa Gato Rita
-	@Override
-	public void tosaGato() {
-		
-		if (especie.replaceAll("\\s", "").equalsIgnoreCase("Felino")) 
-		{
-			if (pelo.equalsIgnoreCase("Curto")) {
-				valor = 50;
-				valorTotal += valor;
-				valorTotalDia = valorTotal;
-				System.out.println("\n  *--------*--------*--------*-------*");
-				System.out.println("         Valor da tosa Acrescentado     ");
-				System.out.println("  *--------*--------*--------*-------*");
-			} else if (pelo.equalsIgnoreCase("Médio")) {
-				valor = 60;
-				valorTotal += valor;
-				valorTotalDia = valorTotal;
-				System.out.println("\n  *--------*--------*--------*-------*");
-				System.out.println("         Valor da tosa Acrescentado     ");
-				System.out.println("  *--------*--------*--------*-------*");
-			} else if (pelo.equalsIgnoreCase("Longo")) {
-				valor = 75;
-				valorTotal += valor;
-				valorTotalDia = valorTotal;
-				System.out.println("\n  *--------*--------*--------*-------*");
-				System.out.println("         Valor da tosa Acrescentado     ");
-				System.out.println("  *--------*--------*--------*-------*");
-			} else {
-				System.out.println("Tipo de Pelo inválido!");
-			}
-
-		}
-
-	}
-
+	//Vacinar
 	// Vacinar Gato Rita
 	@Override
 	public void vacinarGato() {
@@ -645,6 +621,7 @@ public class MetodosMenu implements MenuRepositorio {
 		}
 	}
 
+	//Vacinar
 	// Vacinar Cachorro Rita
 	@Override
 	public void vacinarCachorro() {
@@ -693,6 +670,39 @@ public class MetodosMenu implements MenuRepositorio {
 			default:
 				System.out.println("Não trabalhamos com este tipo de vacina!");
 				break;
+			}
+		}
+	}
+		
+	// Tosa Gato Rita
+	@Override
+	public void tosaGato() {
+		
+		if (especie.replaceAll("\\s", "").equalsIgnoreCase("Felino")) 
+		{
+			if (pelo.equalsIgnoreCase("Curto")) {
+				valor = 50;
+				valorTotal += valor;
+				valorTotalDia = valorTotal;
+				System.out.println("\n  *--------*--------*--------*-------*");
+				System.out.println("         Valor da tosa Acrescentado     ");
+				System.out.println("  *--------*--------*--------*-------*");
+			} else if (pelo.equalsIgnoreCase("Médio")) {
+				valor = 60;
+				valorTotal += valor;
+				valorTotalDia = valorTotal;
+				System.out.println("\n  *--------*--------*--------*-------*");
+				System.out.println("         Valor da tosa Acrescentado     ");
+				System.out.println("  *--------*--------*--------*-------*");
+			} else if (pelo.equalsIgnoreCase("Longo")) {
+				valor = 75;
+				valorTotal += valor;
+				valorTotalDia = valorTotal;
+				System.out.println("\n  *--------*--------*--------*-------*");
+				System.out.println("         Valor da tosa Acrescentado     ");
+				System.out.println("  *--------*--------*--------*-------*");
+			} else {
+				System.out.println("Tipo de Pelo inválido!");
 			}
 		}
 	}
@@ -823,5 +833,16 @@ public class MetodosMenu implements MenuRepositorio {
 		raca = null;
 		peso = 0.0f;
 	}
-
+	
+	//Confere se o cadastro foi finalizado ou não
+	public void cadastroEmAndamento()
+	{
+		if(valorTotal != 0.0f || nomeTutor != null) 
+		{
+			System.out.println("\n  *--------*--------*--------*-------*");
+			System.out.println("    Finalize o cadastro e crie outro");
+			System.out.println("  *--------*--------*--------*-------*");
+		}
+		
+	}
 }
